@@ -231,53 +231,48 @@ function renderService(key) {
 /* Shacharit is long enough that scrolling to the Amidah is a chore; the index
  * lists whatever actually rendered for today, so it doubles as a check on
  * what the siddur decided to include. */
-/* Hebrew names for the structural landmarks the rail aims at.  Sefaria's
- * group titles are English; these are what a siddur calls them. */
-const LANDMARK_HE = {
-  'Preparatory Prayers': 'הַשְׁכָּמַת הַבֹּקֶר', 'Korbanot': 'קָרְבָּנוֹת',
-  'Pesukei Dezimra': 'פְּסוּקֵי דְזִמְרָא', 'Blessings of the Shema': 'קְרִיאַת שְׁמַע',
-  'Amidah': 'עֲמִידָה', 'Amida': 'עֲמִידָה', 'Kedushah': 'קְדֻשָּׁה',
-  'Post Amidah': 'אַחַר הָעֲמִידָה', 'Tachanun': 'תַּחֲנוּן',
-  'Removing the Torah from Ark': 'הוֹצָאַת סֵֽפֶר תּוֹרָה',
-  'Reading from Sefer': 'קְרִיאַת הַתּוֹרָה',
-  'Returning Sefer to Aron': 'הַכְנָסַת סֵֽפֶר תּוֹרָה',
-  'Concluding Prayers': 'סִיּוּם הַתְּפִלָּה', 'Post Service': 'נוֹסָפוֹת',
-  'Korbanot (Israel)': 'קָרְבָּנוֹת', 'Hallel': 'הַלֵּל',
-  'Musaf Amidah for Rosh Chodesh': 'מוּסָף', 'Maariv': 'עַרְבִית',
-  'Minchah': 'מִנְחָה', 'Kaddish': 'קַדִּישׁ',
-  "Additions for Motza'ei Shabbat": 'מוֹצָאֵי שַׁבָּת',
-};
+/* The rail's landmarks, in the order a service runs.  This is written out
+ * rather than derived from the source's own grouping, because Sefaria groups by
+ * where a text sits in its book and what you actually want to skip to is where
+ * you are up to in davening -- the Shema apart from its berachot, Ashrei and
+ * shir shel yom on their own at the end.  Patterns are matched against section
+ * ids, so one list covers all three nusachim despite their different depth. */
+const LANDMARKS = [
+  ['בְּרָכוֹת',              /morning-blessings|birkot-hashachar|torah-blessings|blessings-on-torah/],
+  ['קָרְבָּנוֹת',            /korbanot|offerings|incense-offering|b-raita/],
+  ['פְּסוּקֵי דְזִמְרָא',      /pesukei|hodu|introductory-psalm|barukh-she-amar|yishtabach/],
+  ['בִּרְכוֹת קְרִיאַת שְׁמַע', /blessings-of-the-shema-(barchu|first|second)|the-shema$|arvit-barchu|maariv-barchu/],
+  ['שְׁמַע',                 /blessings-of-the-shema-shema$|-shema$/],
+  ['עֲמִידָה',               /amidah-patriarchs|-amidah$|-amida$|amidah-avot/],
+  ['תַּחֲנוּן',              /tachanun|nefilat|vidui$|avinu-malken/],
+  ['קְרִיאַת הַתּוֹרָה',      /torah-reading|removing-the-torah|for-monday/],
+  ['אַשְׁרֵי',               /concluding-prayers-ashrei|-ashrei$|uva-le/],
+  ['שִׁיר שֶׁל יוֹם',        /song-of-the-day|barchi-nafshi/],
+  ['עָלֵינוּ',               /alenu|aleinu/],
+  ['סְפִירַת הָעֹמֶר',        /sefirat-haomer|counting-of-the-omer/],
+  ['קְרִיאַת שְׁמַע עַל הַמִּטָּה', /shema-al-hamita|bedtime-shema/],
+];
 
-/* Landmarks for the rail.  Long services (Ashkenaz shacharit is ~115 sections)
- * are grouped by their structural parent; short ones list their sections, since
- * grouping them would collapse everything to a single entry. */
 function railTargets() {
-  const heads = [...document.querySelectorAll('#doc .sec, #doc .divider')];
-  const secs = heads.filter((n) => n.classList.contains('sec'));
+  const nodes = [...document.querySelectorAll('#doc .sec, #doc .divider')];
   const out = [];
-  const grouped = secs.length > 15;
-  let last = null;
-  for (const node of heads) {
+  const used = new Set();
+  for (const node of nodes) {
     if (node.classList.contains('divider')) {
-      out.push({ node, label: node.textContent.split('—')[0].trim(), major: true });
-      last = null;
+      const label = node.textContent.split('—')[0].trim();
+      out.push({ node, label });
       continue;
     }
-    const sec = DATA.sections[node.id.replace(/^sec-/, '')];
-    if (!sec) continue;
-    if (grouped) {
-      const p = sec.path;
-      const key = p.length > 1 ? p[p.length - 2] : p[0];
-      if (key === last) continue;
-      last = key;
-      out.push({ node, label: LANDMARK_HE[key] || sec.he, major: false });
-    } else {
-      out.push({ node, label: sec.he, major: false });
-    }
+    const id = node.id.replace(/^sec-/, '');
+    // A section belongs to the FIRST landmark it matches.  If that landmark is
+    // already placed, the section is simply passed over -- it must not fall
+    // through to a later one, or Ashrei inside Pesukei Dezimra would be taken
+    // for the Ashrei that closes the service.
+    const i = LANDMARKS.findIndex(([, re]) => re.test(id));
+    if (i === -1 || used.has(i)) continue;
+    used.add(i);
+    out.push({ node, label: LANDMARKS[i][0] });
   }
-  // Hallel and Musaf arrive both as a divider and as their own sections;
-  // collapse repeats so the rail reads as a list of places, not a list of DOM
-  // nodes that happen to share a name.
   return out.filter((t, i) => i === 0 || t.label !== out[i - 1].label);
 }
 
@@ -332,6 +327,61 @@ window.addEventListener('scroll', () => {
   railTick = true;
   requestAnimationFrame(() => { railTick = false; syncRail(); });
 }, { passive: true });
+
+/* The things you need away from a service: after a meal, before a journey.
+ * Opened over the page so davening keeps its place underneath.  Patterns are
+ * tried in order and the first section that exists in this nusach wins. */
+const QUICK = [
+  ['בִּרְכַּת הַמָּזוֹן',        /^(berachot-birkat-hamazon|birchat-hamazon-birchat-hamazon|post-meal-blessing)$/],
+  ['בְּרָכָה מֵעֵין שָׁלוֹשׁ',    /al-hamichyah|me-ein-shalosh|^al-hamihya$/],
+  ['בּוֹרֵא נְפָשׁוֹת',          /borei-nefashot/],
+  ['בְּרָכוֹת הַנֶּהֱנִין',       /barachot-rishonot|blessing-on-foods|blessings-on-enjoyments/],
+  ['תְּפִלַּת הַדֶּרֶךְ',        /tefillat-haderech|^blessings-traveler-s-prayer$|assorted-blessings-and-prayers-traveler/],
+  ['אֲשֶׁר יָצַר',              /preparatory-prayers-asher-yatzar/],
+  ['בִּרְכַּת הַגּוֹמֵל',        /birkat-hagomel/],
+  ['בְּרָכוֹת הָרְאִיָּה',       /sights-sounds|seeing-rainbow|lightning-thunder/],
+  ['סְפִירַת הָעֹמֶר',          /sefirat-haomer|counting-of-the-omer/],
+  ['בִּרְכַּת הַלְּבָנָה',        /birkat-halevana|kiddush-levanah|blessing-of-the-moon/],
+  ['קְרִיאַת שְׁמַע עַל הַמִּטָּה', /shema-al-hamita|^bedtime-shema$/],
+];
+
+function quickItems() {
+  const ids = Object.keys(DATA.sections);
+  const out = [];
+  for (const [label, re] of QUICK) {
+    const id = ids.find((x) => re.test(x));
+    if (id) out.push({ label, id });
+  }
+  return out;
+}
+
+function buildQuick() {
+  const list = $('#quick-list');
+  list.innerHTML = '';
+  for (const q of quickItems()) {
+    const b = el('button', 'qitem', q.label);
+    b.onclick = () => openQuick(q);
+    list.appendChild(b);
+  }
+}
+
+function openQuick(q) {
+  const sec = DATA.sections[q.id];
+  if (!sec) return;
+  const body = $('#sheet-body');
+  body.innerHTML = '';
+  $('#sheet-title').textContent = q.label;
+  body.appendChild(renderItems(sec.items));
+  $('#sheet').classList.add('open');
+  $('#quick').classList.remove('open');
+  body.scrollTop = 0;
+  document.body.style.overflow = 'hidden';
+}
+
+function closeSheet() {
+  $('#sheet').classList.remove('open');
+  document.body.style.overflow = '';
+}
 
 function buildIndex() {
   const list = $('#index');
@@ -504,6 +554,7 @@ export async function boot() {
     fetch('data/leyning.json').then((r) => r.json()),
   ]);
   await loadNusach(S.nusach);
+  buildQuick();
   applyPrefs();
   await recompute();
   wireSettings();
@@ -520,7 +571,7 @@ function wireSettings() {
   $('#nusach').value = S.nusach;
   $('#nusach').onchange = async (e) => {
     S.nusach = e.target.value; store.set('nusach', S.nusach);
-    await loadNusach(S.nusach); await recompute();
+    await loadNusach(S.nusach); buildQuick(); await recompute();
   };
   $('#israel').checked = S.israel;
   $('#israel').onchange = (e) => { S.israel = e.target.checked;
@@ -549,10 +600,24 @@ function wireSettings() {
   applyWake();
   $('#locate').onclick = locate;
   $('#settings-toggle').onclick = () => {
+    $('#quick').classList.remove('open');
     $('#index-wrap').classList.remove('open');
     $('#settings').classList.toggle('open');
   };
+  $('#quick-toggle').onclick = () => {
+    $('#settings').classList.remove('open');
+    $('#index-wrap').classList.remove('open');
+    $('#quick').classList.toggle('open');
+  };
+  $('#sheet-close').onclick = closeSheet;
+  $('#sheet').addEventListener('click', (e) => {
+    if (e.target.id === 'sheet') closeSheet();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') { closeSheet(); $('#quick').classList.remove('open'); }
+  });
   $('#index-toggle').onclick = () => {
+    $('#quick').classList.remove('open');
     $('#settings').classList.remove('open');
     $('#index-wrap').classList.toggle('open');
   };

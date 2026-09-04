@@ -123,10 +123,20 @@ the header clears the notch and the text clears the home indicator. Offline
 after the first visit. There is an optional screen-wake toggle, because a
 screen that sleeps in the middle of the Amidah is its own small problem.
 
-A rail of landmarks — הַשְׁכָּמַת הַבֹּקֶר, פְּסוּקֵי דְזִמְרָא, עֲמִידָה, קְרִיאַת הַתּוֹרָה,
-הַלֵּל, מוּסָף — sits on the left edge for jumping around a long service, and
-tracks where you are; the header names the section you are in. "תֹּכֶן" opens
-the full list.
+A rail of landmarks sits on the left edge for moving around a long service,
+tracks where you are as you scroll, and names the current section in the
+header. It follows the order you actually daven in — בְּרָכוֹת, קָרְבָּנוֹת,
+פְּסוּקֵי דְזִמְרָא, בִּרְכוֹת קְרִיאַת שְׁמַע, שְׁמַע, עֲמִידָה, תַּחֲנוּן, קְרִיאַת הַתּוֹרָה, אַשְׁרֵי,
+שִׁיר שֶׁל יוֹם — rather than the source's own chapter structure, and it only shows
+what is actually said today, so Tachanun and the Torah reading appear on the
+days they belong to. Ashrei is deliberately the one that closes the service,
+not the one inside Pesukei Dezimra.
+
+**בְּרָכוֹת** in the header opens the things you need away from a service —
+Birkat HaMazon, Tefilat HaDerech, me'ein shalosh, borei nefashot, birkot
+hanehenin, asher yatzar, birkat hagomel, the berachot on sights, sefirat
+ha'omer, birkat halevana, kriat shema al hamita. They open in a sheet over the
+page, so davening keeps its place underneath.
 
 ## Layout
 

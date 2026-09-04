@@ -78,7 +78,7 @@ header{
 #hdate{font-size:1.35rem; font-weight:700; letter-spacing:.01em}
 #gdate{color:var(--ink-soft); font-size:.92rem}
 .btns{margin-inline-start:auto; display:flex; gap:.35rem; flex:none}
-#index-toggle,#settings-toggle{
+#quick-toggle,#index-toggle,#settings-toggle{
   background:none; border:1px solid var(--line);
   color:var(--ink-soft); border-radius:999px; padding:.2rem .7rem;
   font:inherit; font-size:.85rem; cursor:pointer;
@@ -212,6 +212,38 @@ p.empty{color:var(--ink-faint); text-align:center; padding:3rem 0}
 .tikkun .lbl{font:400 .7rem/1 system-ui; color:var(--ink-faint); margin-top:.6rem}
 
 /* --- settings --- */
+/* Quick berachot: the things you need away from a service. */
+#quick{display:none; max-width:44rem; margin:0 auto; padding:.5rem 0 .8rem;
+  border-top:1px solid var(--line)}
+#quick.open{display:block}
+#quick-list{display:flex; flex-wrap:wrap; gap:.35rem}
+.qitem{background:var(--card); border:1px solid var(--line); color:var(--ink);
+  border-radius:999px; padding:.35rem .8rem; font:inherit; font-size:.92rem;
+  cursor:pointer}
+.qitem:hover{border-color:var(--gold); color:var(--gold)}
+
+#sheet{position:fixed; inset:0; z-index:40; display:none;
+  background:color-mix(in srgb, #000 42%, transparent);
+  align-items:flex-end; justify-content:center}
+#sheet.open{display:flex}
+#sheet-card{background:var(--bg); width:100%; max-width:44rem;
+  max-height:88vh; display:flex; flex-direction:column;
+  border-radius:1rem 1rem 0 0; box-shadow:0 -8px 40px rgba(0,0,0,.28);
+  padding-bottom:env(safe-area-inset-bottom)}
+#sheet-head{display:flex; align-items:center; gap:.6rem; padding:.8rem 1rem .5rem;
+  border-bottom:1px solid var(--line); flex:none}
+#sheet-title{font-size:1.05rem; color:var(--gold)}
+#sheet-close{margin-inline-start:auto; background:none; border:1px solid var(--line);
+  color:var(--ink-soft); border-radius:999px; width:2rem; height:2rem;
+  font:inherit; cursor:pointer; flex:none}
+#sheet-body{overflow-y:auto; -webkit-overflow-scrolling:touch;
+  padding:.6rem 1rem 2rem}
+#sheet-body p.t, #sheet-body p.flow{font-size:var(--size); line-height:1.95}
+@media (min-width:640px){
+  #sheet{align-items:center}
+  #sheet-card{border-radius:1rem; max-height:82vh}
+}
+
 #index-wrap{display:none; max-height:60vh; overflow-y:auto; padding:.5rem 0 .8rem;
   border-top:1px solid var(--line); max-width:44rem; margin:0 auto}
 #index-wrap.open{display:block}
@@ -245,13 +277,15 @@ footer a{color:inherit}
   <div class="top">
     <span id="hdate"></span>
     <span id="gdate"></span>
-    <span class="btns"><button id="index-toggle">תֹּכֶן</button><button
+    <span class="btns"><button id="quick-toggle">בְּרָכוֹת</button><button
+      id="index-toggle">תֹּכֶן</button><button
       id="settings-toggle">הַגְדָּרוֹת</button></span>
   </div>
   <div id="now"></div>
   <div id="where" hidden></div>
   <div id="tags"></div>
   <div id="tabs"></div>
+  <div id="quick"><div id="quick-list"></div></div>
   <div id="index-wrap"><div id="index"></div></div>
   <div id="settings">
     <div class="row"><label for="nusach">נֻסָּח</label>
@@ -300,6 +334,16 @@ footer a{color:inherit}
 </div>
 
 <nav id="rail" aria-label="ניווט"></nav>
+
+<div id="sheet" role="dialog" aria-modal="true">
+  <div id="sheet-card">
+    <div id="sheet-head">
+      <b id="sheet-title"></b>
+      <button id="sheet-close" aria-label="סגור">✕</button>
+    </div>
+    <div id="sheet-body"></div>
+  </div>
+</div>
 <main id="doc"></main>
 
 <footer>

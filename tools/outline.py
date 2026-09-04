@@ -33,7 +33,7 @@ SERVICES = {
         ('hallel',    'הַלֵּל',     r'^rosh-hodesh-hallel'),
         ('musaf',     'מוּסָף',     r'^rosh-hodesh-mussaf'),
         ('bedtime',   'קְרִיאַת שְׁמַע עַל הַמִּטָּה', r'^bedtime-shema'),
-        ('extras',    'נוֹסָפוֹת',  r'^(post-meal-blessing|al-hamihya|blessings-on-enjoyments|counting-of-the-omer|blessing-of-the-moon)'),
+        ('extras',    'נוֹסָפוֹת',  r'^(post-meal-blessing|al-hamihya|blessings-on-enjoyments|counting-of-the-omer|blessing-of-the-moon|assorted-blessings)'),
     ],
 }
 
