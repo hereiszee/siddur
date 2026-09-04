@@ -83,30 +83,35 @@ The app names which one applies.
 
 ## Typography
 
-Body text is **Noto Sans Hebrew** (SIL OFL), chosen for legibility after
-setting the candidates side by side at reading size — see
-[`/specimen/`](https://hereiszee.github.io/siddur/specimen/). Noto Serif
-Hebrew, Shofar and Frank Ruehl CLM are alternatives.
+Body text is **Ezra SIL** (SIL OFL) — a serif drawn for pointed Hebrew, modelled
+on the Leningrad Codex, and the most legible of the serif faces that can
+actually render this text. Six alternatives ship with it — Cardo, Nachlieli
+CLM, Noto Serif Hebrew, Frank Ruehl CLM, Shofar, and Noto Sans Hebrew — so the
+choice is one tap in settings rather than a rebuild. A specimen with size and
+leading controls is at
+[`/specimen/`](https://hereiszee.github.io/siddur/specimen/).
 
-What the font can draw decided what could even be considered, and the
-constraint is stricter than it looks:
+Ezra SIL has no bold, and synthesised bold smears nikud into the letter it
+belongs to. Printed siddurim open a beracha with a larger, rubricated word
+rather than a bolder one, so that is what faces without a real bold get.
+
+What a font can *draw* narrowed the field more than reputation did — and
+`cmap` coverage is not the test, since a glyph can be mapped and still be
+empty:
 
 - **Meteg is 3% of every letter in this text** — 18,290 of them. Assistant,
-  Heebo, IBM Plex Sans Hebrew, David Libre, Alef and Rubik all omit it, and
-  would have dropped every one silently.
+  Heebo, IBM Plex Sans Hebrew, David Libre, Alef and Rubik omit it entirely.
 - **The siddur body carries 19,754 cantillation marks**, not just the Torah
-  reading: the Metsudah uses U+0592 as a shva-na marker, and the verses the
-  siddur quotes — Shema, Ashrei, Az Yashir — keep their full ta'amim. So
-  Frank Ruhl Libre and Tinos, which ship none of the 31, break the siddur
-  itself and not only the leyning.
+  reading: the Metsudah marks shva na with U+0592, and quoted verses — Shema,
+  Ashrei, Az Yashir — keep their full ta'amim. Frank Ruhl Libre ships none of
+  the 31 and visibly tears a hole in וְשַׂבְּ֒עֵֽנוּ.
+- **Ashurit draws nothing at all.** Stam Ashkenaz maps every nikud and ta'am to
+  an *empty glyph* — mapped, drawing nothing. Correct for a STA"M face, since a
+  sefer Torah is unpointed, but it means Ashurit cannot show ta'amei hamikra
+  and must never be the body face: as body text it silently strips the vowels
+  out of the siddur.
 
-**Ashurit draws no points at all.** Stam Ashkenaz CLM maps every nikud and
-ta'am to an *empty glyph* — present in the cmap, drawing nothing. That is
-correct for a STA"M face, since a sefer Torah is unpointed, but it means
-Ashurit cannot show ta'amei hamikra, and it must never be the body face: as a
-body font it silently strips the vowels out of the siddur.
-
-So Ashurit is a **Torah-reading mode** instead. The reading can be shown
+So Ashurit is a **Torah-reading mode** instead: the reading can be shown
 pointed with ta'amim, in Ashurit as the sefer has it, or both at once — which
 is what a tikkun korim is.
 

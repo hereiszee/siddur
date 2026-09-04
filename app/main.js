@@ -24,9 +24,9 @@ const store = {
 const DROPPED_FONTS = ['keter', 'hadasim', 'stam'];
 
 function migrateFont(store) {
-  let f = store.get('font', 'notosans');
+  let f = store.get('font', 'ezra');
   if (DROPPED_FONTS.includes(f)) {
-    f = 'notosans';
+    f = 'ezra';
     store.set('font', f);
   }
   return f;
@@ -40,7 +40,7 @@ const S = {
   variants: store.get('variants', false),
   tikkun:   store.get('tikkun', 'menukad'),
   wake:     store.get('wake', false),
-  font:     'notosans',    // replaced below, once the store is readable
+  font:     'ezra',        // replaced below, once the store is readable
   size:     store.get('size', 21),
   loc:      store.get('loc', null),
   service:  null,
