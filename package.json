@@ -1,0 +1,1 @@
+{"name":"siddur-build","private":true,"type":"module","dependencies":{"@hebcal/core":"^6.9.2","@hebcal/leyning":"^10.0.0","esbuild":"^0.28.2","kosher-zmanim":"^0.9.0"}}

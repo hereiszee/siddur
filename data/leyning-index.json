@@ -1,0 +1,3763 @@
+{
+ "readings": {
+  "Vayechi": {
+   "1": {
+    "k": "Genesis",
+    "b": "47:28",
+    "e": "47:31",
+    "v": 4,
+    "reason": null
+   },
+   "2": {
+    "k": "Genesis",
+    "b": "48:1",
+    "e": "48:3",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Genesis",
+    "b": "48:4",
+    "e": "48:9",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Shemot": {
+   "1": {
+    "k": "Exodus",
+    "b": "1:1",
+    "e": "1:7",
+    "v": 7,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "1:8",
+    "e": "1:12",
+    "v": 5,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "1:13",
+    "e": "1:17",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Vaera": {
+   "1": {
+    "k": "Exodus",
+    "b": "6:2",
+    "e": "6:5",
+    "v": 4,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "6:6",
+    "e": "6:9",
+    "v": 4,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "6:10",
+    "e": "6:13",
+    "v": 4,
+    "reason": null
+   }
+  },
+  "Rosh Chodesh Sh'vat": {
+   "1": {
+    "k": "Numbers",
+    "b": "28:1",
+    "e": "28:3",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "28:3",
+    "e": "28:5",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "28:6",
+    "e": "28:10",
+    "v": 5,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "28:11",
+    "e": "28:15",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Bo": {
+   "1": {
+    "k": "Exodus",
+    "b": "10:1",
+    "e": "10:3",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "10:4",
+    "e": "10:6",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "10:7",
+    "e": "10:11",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Beshalach": {
+   "1": {
+    "k": "Exodus",
+    "b": "13:17",
+    "e": "13:22",
+    "v": 6,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "14:1",
+    "e": "14:4",
+    "v": 4,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "14:5",
+    "e": "14:8",
+    "v": 4,
+    "reason": null
+   }
+  },
+  "Yitro": {
+   "1": {
+    "k": "Exodus",
+    "b": "18:1",
+    "e": "18:4",
+    "v": 4,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "18:5",
+    "e": "18:8",
+    "v": 4,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "18:9",
+    "e": "18:12",
+    "v": 4,
+    "reason": null
+   }
+  },
+  "Mishpatim": {
+   "1": {
+    "k": "Exodus",
+    "b": "21:1",
+    "e": "21:6",
+    "v": 6,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "21:7",
+    "e": "21:11",
+    "v": 5,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "21:12",
+    "e": "21:19",
+    "v": 8,
+    "reason": null
+   }
+  },
+  "Terumah": {
+   "1": {
+    "k": "Exodus",
+    "b": "25:1",
+    "e": "25:5",
+    "v": 5,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "25:6",
+    "e": "25:9",
+    "v": 4,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "25:10",
+    "e": "25:16",
+    "v": 7,
+    "reason": null
+   }
+  },
+  "Rosh Chodesh Adar": {
+   "1": {
+    "k": "Numbers",
+    "b": "28:1",
+    "e": "28:3",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "28:3",
+    "e": "28:5",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "28:6",
+    "e": "28:10",
+    "v": 5,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "28:11",
+    "e": "28:15",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Tetzaveh": {
+   "1": {
+    "k": "Exodus",
+    "b": "27:20",
+    "e": "28:5",
+    "v": 7,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "28:6",
+    "e": "28:9",
+    "v": 4,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "28:10",
+    "e": "28:12",
+    "v": 3,
+    "reason": null
+   }
+  },
+  "Ta'anit Esther": {
+   "1": {
+    "k": "Exodus",
+    "b": "32:11",
+    "e": "32:14",
+    "v": 4,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "34:1",
+    "e": "34:3",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "34:4",
+    "e": "34:10",
+    "v": 7,
+    "reason": null
+   }
+  },
+  "Ta'anit Esther (Mincha)": {
+   "1": {
+    "k": "Exodus",
+    "b": "32:11",
+    "e": "32:14",
+    "v": 4,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "34:1",
+    "e": "34:3",
+    "v": 3,
+    "reason": null
+   },
+   "M": {
+    "k": "Exodus",
+    "b": "34:4",
+    "e": "34:10",
+    "v": 7,
+    "reason": null
+   }
+  },
+  "Purim": {
+   "1": {
+    "k": "Exodus",
+    "b": "17:8",
+    "e": "17:10",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "17:11",
+    "e": "17:13",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "17:14",
+    "e": "17:16",
+    "v": 3,
+    "reason": null
+   }
+  },
+  "Ki Tisa": {
+   "1": {
+    "k": "Exodus",
+    "b": "30:11",
+    "e": "30:13",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "30:14",
+    "e": "30:16",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "30:17",
+    "e": "30:21",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Vayakhel-Pekudei": {
+   "1": {
+    "k": "Exodus",
+    "b": "35:1",
+    "e": "35:3",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "35:4",
+    "e": "35:10",
+    "v": 7,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "35:11",
+    "e": "35:20",
+    "v": 10,
+    "reason": null
+   }
+  },
+  "Vayikra": {
+   "1": {
+    "k": "Leviticus",
+    "b": "1:1",
+    "e": "1:4",
+    "v": 4,
+    "reason": null
+   },
+   "2": {
+    "k": "Leviticus",
+    "b": "1:5",
+    "e": "1:9",
+    "v": 5,
+    "reason": null
+   },
+   "3": {
+    "k": "Leviticus",
+    "b": "1:10",
+    "e": "1:13",
+    "v": 4,
+    "reason": null
+   }
+  },
+  "Rosh Chodesh Nisan": {
+   "1": {
+    "k": "Numbers",
+    "b": "28:1",
+    "e": "28:3",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "28:3",
+    "e": "28:5",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "28:6",
+    "e": "28:10",
+    "v": 5,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "28:11",
+    "e": "28:15",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Tzav": {
+   "1": {
+    "k": "Leviticus",
+    "b": "6:1",
+    "e": "6:3",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Leviticus",
+    "b": "6:4",
+    "e": "6:6",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Leviticus",
+    "b": "6:7",
+    "e": "6:11",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Shmini": {
+   "1": {
+    "k": "Leviticus",
+    "b": "9:1",
+    "e": "9:6",
+    "v": 6,
+    "reason": null
+   },
+   "2": {
+    "k": "Leviticus",
+    "b": "9:7",
+    "e": "9:10",
+    "v": 4,
+    "reason": null
+   },
+   "3": {
+    "k": "Leviticus",
+    "b": "9:11",
+    "e": "9:16",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Pesach I": {
+   "1": {
+    "k": "Exodus",
+    "b": "12:21",
+    "e": "12:24",
+    "v": 4,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "12:25",
+    "e": "12:28",
+    "v": 4,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "12:29",
+    "e": "12:36",
+    "v": 8,
+    "reason": null
+   },
+   "4": {
+    "k": "Exodus",
+    "b": "12:37",
+    "e": "12:42",
+    "v": 6,
+    "reason": null
+   },
+   "5": {
+    "k": "Exodus",
+    "b": "12:43",
+    "e": "12:51",
+    "v": 9,
+    "reason": null
+   },
+   "M": {
+    "k": "Numbers",
+    "b": "28:16",
+    "e": "28:25",
+    "v": 10,
+    "reason": null
+   }
+  },
+  "Pesach II": {
+   "1": {
+    "k": "Leviticus",
+    "b": "22:26",
+    "e": "23:3",
+    "v": 11,
+    "reason": null
+   },
+   "2": {
+    "k": "Leviticus",
+    "b": "23:4",
+    "e": "23:14",
+    "v": 11,
+    "reason": null
+   },
+   "3": {
+    "k": "Leviticus",
+    "b": "23:15",
+    "e": "23:22",
+    "v": 8,
+    "reason": null
+   },
+   "4": {
+    "k": "Leviticus",
+    "b": "23:23",
+    "e": "23:32",
+    "v": 10,
+    "reason": null
+   },
+   "5": {
+    "k": "Leviticus",
+    "b": "23:33",
+    "e": "23:44",
+    "v": 12,
+    "reason": null
+   },
+   "M": {
+    "k": "Numbers",
+    "b": "28:16",
+    "e": "28:25",
+    "v": 10,
+    "reason": null
+   }
+  },
+  "Pesach Chol ha-Moed Day 2 on Sunday": {
+   "1": {
+    "k": "Exodus",
+    "b": "13:1",
+    "e": "13:4",
+    "v": 4,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "13:5",
+    "e": "13:10",
+    "v": 6,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "13:11",
+    "e": "13:16",
+    "v": 6,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "28:19",
+    "e": "28:25",
+    "v": 7,
+    "reason": null
+   }
+  },
+  "Pesach Chol ha-Moed Day 3 on Monday": {
+   "1": {
+    "k": "Exodus",
+    "b": "22:24",
+    "e": "22:26",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "22:27",
+    "e": "23:5",
+    "v": 9,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "23:6",
+    "e": "23:19",
+    "v": 14,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "28:19",
+    "e": "28:25",
+    "v": 7,
+    "reason": null
+   }
+  },
+  "Pesach Chol ha-Moed Day 4": {
+   "1": {
+    "k": "Numbers",
+    "b": "9:1",
+    "e": "9:5",
+    "v": 5,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "9:6",
+    "e": "9:8",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "9:9",
+    "e": "9:14",
+    "v": 6,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "28:19",
+    "e": "28:25",
+    "v": 7,
+    "reason": null
+   }
+  },
+  "Pesach VII": {
+   "1": {
+    "k": "Exodus",
+    "b": "13:17",
+    "e": "13:22",
+    "v": 6,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "14:1",
+    "e": "14:8",
+    "v": 8,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "14:9",
+    "e": "14:14",
+    "v": 6,
+    "reason": null
+   },
+   "4": {
+    "k": "Exodus",
+    "b": "14:15",
+    "e": "14:25",
+    "v": 11,
+    "reason": null
+   },
+   "5": {
+    "k": "Exodus",
+    "b": "14:26",
+    "e": "15:26",
+    "v": 32,
+    "reason": null
+   },
+   "M": {
+    "k": "Numbers",
+    "b": "28:19",
+    "e": "28:25",
+    "v": 7,
+    "reason": null
+   }
+  },
+  "Pesach VIII": {
+   "1": {
+    "k": "Deuteronomy",
+    "b": "15:19",
+    "e": "15:23",
+    "v": 5,
+    "reason": null
+   },
+   "2": {
+    "k": "Deuteronomy",
+    "b": "16:1",
+    "e": "16:3",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Deuteronomy",
+    "b": "16:4",
+    "e": "16:8",
+    "v": 5,
+    "reason": null
+   },
+   "4": {
+    "k": "Deuteronomy",
+    "b": "16:9",
+    "e": "16:12",
+    "v": 4,
+    "reason": null
+   },
+   "5": {
+    "k": "Deuteronomy",
+    "b": "16:13",
+    "e": "16:17",
+    "v": 5,
+    "reason": null
+   },
+   "M": {
+    "k": "Numbers",
+    "b": "28:19",
+    "e": "28:25",
+    "v": 7,
+    "reason": null
+   }
+  },
+  "Tazria-Metzora": {
+   "1": {
+    "k": "Leviticus",
+    "b": "12:1",
+    "e": "12:4",
+    "v": 4,
+    "reason": null
+   },
+   "2": {
+    "k": "Leviticus",
+    "b": "12:5",
+    "e": "12:8",
+    "v": 4,
+    "reason": null
+   },
+   "3": {
+    "k": "Leviticus",
+    "b": "13:1",
+    "e": "13:5",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Rosh Chodesh Iyyar": {
+   "1": {
+    "k": "Numbers",
+    "b": "28:1",
+    "e": "28:3",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "28:3",
+    "e": "28:5",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "28:6",
+    "e": "28:10",
+    "v": 5,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "28:11",
+    "e": "28:15",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Achrei Mot-Kedoshim": {
+   "1": {
+    "k": "Leviticus",
+    "b": "16:1",
+    "e": "16:6",
+    "v": 6,
+    "reason": null
+   },
+   "2": {
+    "k": "Leviticus",
+    "b": "16:7",
+    "e": "16:11",
+    "v": 5,
+    "reason": null
+   },
+   "3": {
+    "k": "Leviticus",
+    "b": "16:12",
+    "e": "16:17",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Yom HaAtzma'ut": {
+   "1": {
+    "k": "Deuteronomy",
+    "b": "7:12",
+    "e": "7:21",
+    "v": 10,
+    "reason": null
+   },
+   "2": {
+    "k": "Deuteronomy",
+    "b": "7:22",
+    "e": "8:3",
+    "v": 8,
+    "reason": null
+   },
+   "3": {
+    "k": "Deuteronomy",
+    "b": "8:4",
+    "e": "8:18",
+    "v": 15,
+    "reason": null
+   }
+  },
+  "Emor": {
+   "1": {
+    "k": "Leviticus",
+    "b": "21:1",
+    "e": "21:6",
+    "v": 6,
+    "reason": null
+   },
+   "2": {
+    "k": "Leviticus",
+    "b": "21:7",
+    "e": "21:12",
+    "v": 6,
+    "reason": null
+   },
+   "3": {
+    "k": "Leviticus",
+    "b": "21:13",
+    "e": "21:15",
+    "v": 3,
+    "reason": null
+   }
+  },
+  "Behar-Bechukotai": {
+   "1": {
+    "k": "Leviticus",
+    "b": "25:1",
+    "e": "25:3",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Leviticus",
+    "b": "25:4",
+    "e": "25:7",
+    "v": 4,
+    "reason": null
+   },
+   "3": {
+    "k": "Leviticus",
+    "b": "25:8",
+    "e": "25:13",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Bamidbar": {
+   "1": {
+    "k": "Numbers",
+    "b": "1:1",
+    "e": "1:4",
+    "v": 4,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "1:5",
+    "e": "1:16",
+    "v": 12,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "1:17",
+    "e": "1:19",
+    "v": 3,
+    "reason": null
+   }
+  },
+  "Rosh Chodesh Sivan": {
+   "1": {
+    "k": "Numbers",
+    "b": "28:1",
+    "e": "28:3",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "28:3",
+    "e": "28:5",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "28:6",
+    "e": "28:10",
+    "v": 5,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "28:11",
+    "e": "28:15",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Nasso": {
+   "1": {
+    "k": "Numbers",
+    "b": "4:21",
+    "e": "4:24",
+    "v": 4,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "4:25",
+    "e": "4:28",
+    "v": 4,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "4:29",
+    "e": "4:33",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Shavuot I": {
+   "1": {
+    "k": "Exodus",
+    "b": "19:1",
+    "e": "19:6",
+    "v": 6,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "19:7",
+    "e": "19:13",
+    "v": 7,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "19:14",
+    "e": "19:19",
+    "v": 6,
+    "reason": null
+   },
+   "4": {
+    "k": "Exodus",
+    "b": "19:20",
+    "e": "20:14",
+    "v": 20,
+    "reason": null
+   },
+   "5": {
+    "k": "Exodus",
+    "b": "20:15",
+    "e": "20:23",
+    "v": 9,
+    "reason": null
+   },
+   "M": {
+    "k": "Numbers",
+    "b": "28:26",
+    "e": "28:31",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Beha'alotcha": {
+   "1": {
+    "k": "Numbers",
+    "b": "8:1",
+    "e": "8:4",
+    "v": 4,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "8:5",
+    "e": "8:9",
+    "v": 5,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "8:10",
+    "e": "8:14",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Sh'lach": {
+   "1": {
+    "k": "Numbers",
+    "b": "13:1",
+    "e": "13:3",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "13:4",
+    "e": "13:16",
+    "v": 13,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "13:17",
+    "e": "13:20",
+    "v": 4,
+    "reason": null
+   }
+  },
+  "Rosh Chodesh Tamuz": {
+   "1": {
+    "k": "Numbers",
+    "b": "28:1",
+    "e": "28:3",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "28:3",
+    "e": "28:5",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "28:6",
+    "e": "28:10",
+    "v": 5,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "28:11",
+    "e": "28:15",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Korach": {
+   "1": {
+    "k": "Numbers",
+    "b": "16:1",
+    "e": "16:3",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "16:4",
+    "e": "16:7",
+    "v": 4,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "16:8",
+    "e": "16:13",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Chukat-Balak": {
+   "1": {
+    "k": "Numbers",
+    "b": "19:1",
+    "e": "19:6",
+    "v": 6,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "19:7",
+    "e": "19:9",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "19:10",
+    "e": "19:17",
+    "v": 8,
+    "reason": null
+   }
+  },
+  "Pinchas": {
+   "1": {
+    "k": "Numbers",
+    "b": "25:10",
+    "e": "25:12",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "25:13",
+    "e": "25:15",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "25:16",
+    "e": "26:4",
+    "v": 8,
+    "reason": null
+   }
+  },
+  "Tzom Tammuz": {
+   "1": {
+    "k": "Exodus",
+    "b": "32:11",
+    "e": "32:14",
+    "v": 4,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "34:1",
+    "e": "34:3",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "34:4",
+    "e": "34:10",
+    "v": 7,
+    "reason": null
+   }
+  },
+  "Tzom Tammuz (Mincha)": {
+   "1": {
+    "k": "Exodus",
+    "b": "32:11",
+    "e": "32:14",
+    "v": 4,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "34:1",
+    "e": "34:3",
+    "v": 3,
+    "reason": null
+   },
+   "M": {
+    "k": "Exodus",
+    "b": "34:4",
+    "e": "34:10",
+    "v": 7,
+    "reason": null
+   }
+  },
+  "Matot-Masei": {
+   "1": {
+    "k": "Numbers",
+    "b": "30:2",
+    "e": "30:9",
+    "v": 8,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "30:10",
+    "e": "30:13",
+    "v": 4,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "30:14",
+    "e": "30:17",
+    "v": 4,
+    "reason": null
+   }
+  },
+  "Devarim": {
+   "1": {
+    "k": "Deuteronomy",
+    "b": "1:1",
+    "e": "1:3",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Deuteronomy",
+    "b": "1:4",
+    "e": "1:7",
+    "v": 4,
+    "reason": null
+   },
+   "3": {
+    "k": "Deuteronomy",
+    "b": "1:8",
+    "e": "1:11",
+    "v": 4,
+    "reason": null
+   }
+  },
+  "Rosh Chodesh Av": {
+   "1": {
+    "k": "Numbers",
+    "b": "28:1",
+    "e": "28:3",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "28:3",
+    "e": "28:5",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "28:6",
+    "e": "28:10",
+    "v": 5,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "28:11",
+    "e": "28:15",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Vaetchanan": {
+   "1": {
+    "k": "Deuteronomy",
+    "b": "3:23",
+    "e": "3:25",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Deuteronomy",
+    "b": "3:26",
+    "e": "4:4",
+    "v": 8,
+    "reason": null
+   },
+   "3": {
+    "k": "Deuteronomy",
+    "b": "4:5",
+    "e": "4:8",
+    "v": 4,
+    "reason": null
+   }
+  },
+  "Tish'a B'Av": {
+   "1": {
+    "k": "Deuteronomy",
+    "b": "4:25",
+    "e": "4:29",
+    "v": 5,
+    "reason": null
+   },
+   "2": {
+    "k": "Deuteronomy",
+    "b": "4:30",
+    "e": "4:35",
+    "v": 6,
+    "reason": null
+   },
+   "3": {
+    "k": "Deuteronomy",
+    "b": "4:36",
+    "e": "4:40",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Tish'a B'Av (Mincha)": {
+   "1": {
+    "k": "Exodus",
+    "b": "32:11",
+    "e": "32:14",
+    "v": 4,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "34:1",
+    "e": "34:3",
+    "v": 3,
+    "reason": null
+   },
+   "M": {
+    "k": "Exodus",
+    "b": "34:4",
+    "e": "34:10",
+    "v": 7,
+    "reason": null
+   }
+  },
+  "Eikev": {
+   "1": {
+    "k": "Deuteronomy",
+    "b": "7:12",
+    "e": "7:21",
+    "v": 10,
+    "reason": null
+   },
+   "2": {
+    "k": "Deuteronomy",
+    "b": "7:22",
+    "e": "8:3",
+    "v": 8,
+    "reason": null
+   },
+   "3": {
+    "k": "Deuteronomy",
+    "b": "8:4",
+    "e": "8:10",
+    "v": 7,
+    "reason": null
+   }
+  },
+  "Re'eh": {
+   "1": {
+    "k": "Deuteronomy",
+    "b": "11:26",
+    "e": "11:31",
+    "v": 6,
+    "reason": null
+   },
+   "2": {
+    "k": "Deuteronomy",
+    "b": "11:32",
+    "e": "12:5",
+    "v": 6,
+    "reason": null
+   },
+   "3": {
+    "k": "Deuteronomy",
+    "b": "12:6",
+    "e": "12:10",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Shoftim": {
+   "1": {
+    "k": "Deuteronomy",
+    "b": "16:18",
+    "e": "16:20",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Deuteronomy",
+    "b": "16:21",
+    "e": "17:10",
+    "v": 12,
+    "reason": null
+   },
+   "3": {
+    "k": "Deuteronomy",
+    "b": "17:11",
+    "e": "17:13",
+    "v": 3,
+    "reason": null
+   }
+  },
+  "Rosh Chodesh Elul": {
+   "1": {
+    "k": "Numbers",
+    "b": "28:1",
+    "e": "28:3",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "28:3",
+    "e": "28:5",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "28:6",
+    "e": "28:10",
+    "v": 5,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "28:11",
+    "e": "28:15",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Ki Teitzei": {
+   "1": {
+    "k": "Deuteronomy",
+    "b": "21:10",
+    "e": "21:14",
+    "v": 5,
+    "reason": null
+   },
+   "2": {
+    "k": "Deuteronomy",
+    "b": "21:15",
+    "e": "21:17",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Deuteronomy",
+    "b": "21:18",
+    "e": "21:21",
+    "v": 4,
+    "reason": null
+   }
+  },
+  "Ki Tavo": {
+   "1": {
+    "k": "Deuteronomy",
+    "b": "26:1",
+    "e": "26:3",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Deuteronomy",
+    "b": "26:4",
+    "e": "26:11",
+    "v": 8,
+    "reason": null
+   },
+   "3": {
+    "k": "Deuteronomy",
+    "b": "26:12",
+    "e": "26:15",
+    "v": 4,
+    "reason": null
+   }
+  },
+  "Nitzavim-Vayeilech": {
+   "1": {
+    "k": "Deuteronomy",
+    "b": "29:9",
+    "e": "29:11",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Deuteronomy",
+    "b": "29:12",
+    "e": "29:14",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Deuteronomy",
+    "b": "29:15",
+    "e": "29:28",
+    "v": 14,
+    "reason": null
+   }
+  },
+  "Ha'azinu": {
+   "1": {
+    "k": "Deuteronomy",
+    "b": "32:1",
+    "e": "32:3",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Deuteronomy",
+    "b": "32:4",
+    "e": "32:6",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Deuteronomy",
+    "b": "32:7",
+    "e": "32:12",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Rosh Hashana II": {
+   "1": {
+    "k": "Genesis",
+    "b": "22:1",
+    "e": "22:3",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Genesis",
+    "b": "22:4",
+    "e": "22:8",
+    "v": 5,
+    "reason": null
+   },
+   "3": {
+    "k": "Genesis",
+    "b": "22:9",
+    "e": "22:14",
+    "v": 6,
+    "reason": null
+   },
+   "4": {
+    "k": "Genesis",
+    "b": "22:15",
+    "e": "22:19",
+    "v": 5,
+    "reason": null
+   },
+   "5": {
+    "k": "Genesis",
+    "b": "22:20",
+    "e": "22:24",
+    "v": 5,
+    "reason": null
+   },
+   "M": {
+    "k": "Numbers",
+    "b": "29:1",
+    "e": "29:6",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Tzom Gedaliah": {
+   "1": {
+    "k": "Exodus",
+    "b": "32:11",
+    "e": "32:14",
+    "v": 4,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "34:1",
+    "e": "34:3",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "34:4",
+    "e": "34:10",
+    "v": 7,
+    "reason": null
+   }
+  },
+  "Tzom Gedaliah (Mincha)": {
+   "1": {
+    "k": "Exodus",
+    "b": "32:11",
+    "e": "32:14",
+    "v": 4,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "34:1",
+    "e": "34:3",
+    "v": 3,
+    "reason": null
+   },
+   "M": {
+    "k": "Exodus",
+    "b": "34:4",
+    "e": "34:10",
+    "v": 7,
+    "reason": null
+   }
+  },
+  "Yom Kippur": {
+   "1": {
+    "k": "Leviticus",
+    "b": "16:1",
+    "e": "16:6",
+    "v": 6,
+    "reason": null
+   },
+   "2": {
+    "k": "Leviticus",
+    "b": "16:7",
+    "e": "16:11",
+    "v": 5,
+    "reason": null
+   },
+   "3": {
+    "k": "Leviticus",
+    "b": "16:12",
+    "e": "16:17",
+    "v": 6,
+    "reason": null
+   },
+   "4": {
+    "k": "Leviticus",
+    "b": "16:18",
+    "e": "16:24",
+    "v": 7,
+    "reason": null
+   },
+   "5": {
+    "k": "Leviticus",
+    "b": "16:25",
+    "e": "16:30",
+    "v": 6,
+    "reason": null
+   },
+   "6": {
+    "k": "Leviticus",
+    "b": "16:31",
+    "e": "16:34",
+    "v": 4,
+    "reason": null
+   },
+   "M": {
+    "k": "Numbers",
+    "b": "29:7",
+    "e": "29:11",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Yom Kippur (Mincha)": {
+   "1": {
+    "k": "Leviticus",
+    "b": "18:1",
+    "e": "18:5",
+    "v": 5,
+    "reason": null
+   },
+   "2": {
+    "k": "Leviticus",
+    "b": "18:6",
+    "e": "18:21",
+    "v": 16,
+    "reason": null
+   },
+   "M": {
+    "k": "Leviticus",
+    "b": "18:22",
+    "e": "18:30",
+    "v": 9,
+    "reason": null
+   }
+  },
+  "Vezot Haberakhah": {
+   "1": {
+    "k": "Deuteronomy",
+    "b": "33:1",
+    "e": "33:7",
+    "v": 7,
+    "reason": null
+   },
+   "2": {
+    "k": "Deuteronomy",
+    "b": "33:8",
+    "e": "33:12",
+    "v": 5,
+    "reason": null
+   },
+   "3": {
+    "k": "Deuteronomy",
+    "b": "33:13",
+    "e": "33:17",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Sukkot II": {
+   "1": {
+    "k": "Leviticus",
+    "b": "22:26",
+    "e": "23:3",
+    "v": 11,
+    "reason": null
+   },
+   "2": {
+    "k": "Leviticus",
+    "b": "23:4",
+    "e": "23:14",
+    "v": 11,
+    "reason": null
+   },
+   "3": {
+    "k": "Leviticus",
+    "b": "23:15",
+    "e": "23:22",
+    "v": 8,
+    "reason": null
+   },
+   "4": {
+    "k": "Leviticus",
+    "b": "23:23",
+    "e": "23:32",
+    "v": 10,
+    "reason": null
+   },
+   "5": {
+    "k": "Leviticus",
+    "b": "23:33",
+    "e": "23:44",
+    "v": 12,
+    "reason": null
+   },
+   "M": {
+    "k": "Numbers",
+    "b": "29:12",
+    "e": "29:16",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Sukkot Chol ha-Moed Day 1": {
+   "1": {
+    "k": "Numbers",
+    "b": "29:17",
+    "e": "29:19",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "29:20",
+    "e": "29:22",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "29:23",
+    "e": "29:25",
+    "v": 3,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "29:17",
+    "e": "29:22",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Sukkot Chol ha-Moed Day 2": {
+   "1": {
+    "k": "Numbers",
+    "b": "29:20",
+    "e": "29:22",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "29:23",
+    "e": "29:25",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "29:26",
+    "e": "29:28",
+    "v": 3,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "29:20",
+    "e": "29:25",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Sukkot Chol ha-Moed Day 3": {
+   "1": {
+    "k": "Numbers",
+    "b": "29:23",
+    "e": "29:25",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "29:26",
+    "e": "29:28",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "29:29",
+    "e": "29:31",
+    "v": 3,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "29:23",
+    "e": "29:28",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Sukkot Chol ha-Moed Day 4": {
+   "1": {
+    "k": "Numbers",
+    "b": "29:26",
+    "e": "29:28",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "29:29",
+    "e": "29:31",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "29:32",
+    "e": "29:34",
+    "v": 3,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "29:26",
+    "e": "29:31",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Sukkot Final Day (Hoshana Raba)": {
+   "1": {
+    "k": "Numbers",
+    "b": "29:26",
+    "e": "29:28",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "29:29",
+    "e": "29:31",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "29:32",
+    "e": "29:34",
+    "v": 3,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "29:29",
+    "e": "29:34",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Simchat Torah": {
+   "1": {
+    "k": "Deuteronomy",
+    "b": "33:1",
+    "e": "33:7",
+    "v": 7,
+    "reason": null
+   },
+   "2": {
+    "k": "Deuteronomy",
+    "b": "33:8",
+    "e": "33:12",
+    "v": 5,
+    "reason": null
+   },
+   "3": {
+    "k": "Deuteronomy",
+    "b": "33:13",
+    "e": "33:17",
+    "v": 5,
+    "reason": null
+   },
+   "4": {
+    "k": "Deuteronomy",
+    "b": "33:18",
+    "e": "33:21",
+    "v": 4,
+    "reason": null
+   },
+   "5": {
+    "k": "Deuteronomy",
+    "b": "33:22",
+    "e": "33:26",
+    "v": 5,
+    "reason": null
+   },
+   "6": {
+    "k": "Deuteronomy",
+    "b": "33:27",
+    "e": "34:12",
+    "v": 15,
+    "reason": null
+   },
+   "7": {
+    "k": "Genesis",
+    "b": "1:1",
+    "e": "2:3",
+    "v": 34,
+    "reason": null
+   },
+   "M": {
+    "k": "Numbers",
+    "b": "29:35",
+    "e": "30:1",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Bereshit": {
+   "1": {
+    "k": "Genesis",
+    "b": "1:1",
+    "e": "1:5",
+    "v": 5,
+    "reason": null
+   },
+   "2": {
+    "k": "Genesis",
+    "b": "1:6",
+    "e": "1:8",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Genesis",
+    "b": "1:9",
+    "e": "1:13",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Rosh Chodesh Cheshvan": {
+   "1": {
+    "k": "Numbers",
+    "b": "28:1",
+    "e": "28:3",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "28:3",
+    "e": "28:5",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "28:6",
+    "e": "28:10",
+    "v": 5,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "28:11",
+    "e": "28:15",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Noach": {
+   "1": {
+    "k": "Genesis",
+    "b": "6:9",
+    "e": "6:16",
+    "v": 8,
+    "reason": null
+   },
+   "2": {
+    "k": "Genesis",
+    "b": "6:17",
+    "e": "6:19",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Genesis",
+    "b": "6:20",
+    "e": "6:22",
+    "v": 3,
+    "reason": null
+   }
+  },
+  "Lech-Lecha": {
+   "1": {
+    "k": "Genesis",
+    "b": "12:1",
+    "e": "12:3",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Genesis",
+    "b": "12:4",
+    "e": "12:9",
+    "v": 6,
+    "reason": null
+   },
+   "3": {
+    "k": "Genesis",
+    "b": "12:10",
+    "e": "12:13",
+    "v": 4,
+    "reason": null
+   }
+  },
+  "Vayera": {
+   "1": {
+    "k": "Genesis",
+    "b": "18:1",
+    "e": "18:5",
+    "v": 5,
+    "reason": null
+   },
+   "2": {
+    "k": "Genesis",
+    "b": "18:6",
+    "e": "18:8",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Genesis",
+    "b": "18:9",
+    "e": "18:14",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Chayei Sara": {
+   "1": {
+    "k": "Genesis",
+    "b": "23:1",
+    "e": "23:7",
+    "v": 7,
+    "reason": null
+   },
+   "2": {
+    "k": "Genesis",
+    "b": "23:8",
+    "e": "23:12",
+    "v": 5,
+    "reason": null
+   },
+   "3": {
+    "k": "Genesis",
+    "b": "23:13",
+    "e": "23:16",
+    "v": 4,
+    "reason": null
+   }
+  },
+  "Toldot": {
+   "1": {
+    "k": "Genesis",
+    "b": "25:19",
+    "e": "25:22",
+    "v": 4,
+    "reason": null
+   },
+   "2": {
+    "k": "Genesis",
+    "b": "25:23",
+    "e": "25:26",
+    "v": 4,
+    "reason": null
+   },
+   "3": {
+    "k": "Genesis",
+    "b": "25:27",
+    "e": "26:5",
+    "v": 13,
+    "reason": null
+   }
+  },
+  "Rosh Chodesh Kislev": {
+   "1": {
+    "k": "Numbers",
+    "b": "28:1",
+    "e": "28:3",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "28:3",
+    "e": "28:5",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "28:6",
+    "e": "28:10",
+    "v": 5,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "28:11",
+    "e": "28:15",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Vayetzei": {
+   "1": {
+    "k": "Genesis",
+    "b": "28:10",
+    "e": "28:12",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Genesis",
+    "b": "28:13",
+    "e": "28:17",
+    "v": 5,
+    "reason": null
+   },
+   "3": {
+    "k": "Genesis",
+    "b": "28:18",
+    "e": "28:22",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Vayishlach": {
+   "1": {
+    "k": "Genesis",
+    "b": "32:4",
+    "e": "32:6",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Genesis",
+    "b": "32:7",
+    "e": "32:9",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Genesis",
+    "b": "32:10",
+    "e": "32:13",
+    "v": 4,
+    "reason": null
+   }
+  },
+  "Vayeshev": {
+   "1": {
+    "k": "Genesis",
+    "b": "37:1",
+    "e": "37:3",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Genesis",
+    "b": "37:4",
+    "e": "37:7",
+    "v": 4,
+    "reason": null
+   },
+   "3": {
+    "k": "Genesis",
+    "b": "37:8",
+    "e": "37:11",
+    "v": 4,
+    "reason": null
+   }
+  },
+  "Chanukah Day 2": {
+   "1": {
+    "k": "Numbers",
+    "b": "7:18",
+    "e": "7:20",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "7:21",
+    "e": "7:23",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "7:24",
+    "e": "7:29",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Chanukah Day 3": {
+   "1": {
+    "k": "Numbers",
+    "b": "7:24",
+    "e": "7:26",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "7:27",
+    "e": "7:29",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "7:30",
+    "e": "7:35",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Chanukah Day 4": {
+   "1": {
+    "k": "Numbers",
+    "b": "7:30",
+    "e": "7:32",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "7:33",
+    "e": "7:35",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "7:36",
+    "e": "7:41",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Chanukah Day 5": {
+   "1": {
+    "k": "Numbers",
+    "b": "7:36",
+    "e": "7:38",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "7:39",
+    "e": "7:41",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "7:42",
+    "e": "7:47",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Chanukah Day 6": {
+   "1": {
+    "k": "Numbers",
+    "b": "28:1",
+    "e": "28:5",
+    "v": 5,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "28:6",
+    "e": "28:10",
+    "v": 5,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "28:11",
+    "e": "28:15",
+    "v": 5,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "7:42",
+    "e": "7:47",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Chanukah Day 7 (on Rosh Chodesh)": {
+   "1": {
+    "k": "Numbers",
+    "b": "28:1",
+    "e": "28:5",
+    "v": 5,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "28:6",
+    "e": "28:10",
+    "v": 5,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "28:11",
+    "e": "28:15",
+    "v": 5,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "7:48",
+    "e": "7:53",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Vayigash": {
+   "1": {
+    "k": "Genesis",
+    "b": "44:18",
+    "e": "44:20",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Genesis",
+    "b": "44:21",
+    "e": "44:24",
+    "v": 4,
+    "reason": null
+   },
+   "3": {
+    "k": "Genesis",
+    "b": "44:25",
+    "e": "44:30",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Asara B'Tevet": {
+   "1": {
+    "k": "Exodus",
+    "b": "32:11",
+    "e": "32:14",
+    "v": 4,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "34:1",
+    "e": "34:3",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "34:4",
+    "e": "34:10",
+    "v": 7,
+    "reason": null
+   }
+  },
+  "Asara B'Tevet (Mincha)": {
+   "1": {
+    "k": "Exodus",
+    "b": "32:11",
+    "e": "32:14",
+    "v": 4,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "34:1",
+    "e": "34:3",
+    "v": 3,
+    "reason": null
+   },
+   "M": {
+    "k": "Exodus",
+    "b": "34:4",
+    "e": "34:10",
+    "v": 7,
+    "reason": null
+   }
+  },
+  "Rosh Chodesh Adar I": {
+   "1": {
+    "k": "Numbers",
+    "b": "28:1",
+    "e": "28:3",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "28:3",
+    "e": "28:5",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "28:6",
+    "e": "28:10",
+    "v": 5,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "28:11",
+    "e": "28:15",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Vayakhel": {
+   "1": {
+    "k": "Exodus",
+    "b": "35:1",
+    "e": "35:3",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "35:4",
+    "e": "35:10",
+    "v": 7,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "35:11",
+    "e": "35:20",
+    "v": 10,
+    "reason": null
+   }
+  },
+  "Pekudei": {
+   "1": {
+    "k": "Exodus",
+    "b": "38:21",
+    "e": "38:23",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "38:24",
+    "e": "38:27",
+    "v": 4,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "38:28",
+    "e": "39:1",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Rosh Chodesh Adar II": {
+   "1": {
+    "k": "Numbers",
+    "b": "28:1",
+    "e": "28:3",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "28:3",
+    "e": "28:5",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "28:6",
+    "e": "28:10",
+    "v": 5,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "28:11",
+    "e": "28:15",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Tazria": {
+   "1": {
+    "k": "Leviticus",
+    "b": "12:1",
+    "e": "12:4",
+    "v": 4,
+    "reason": null
+   },
+   "2": {
+    "k": "Leviticus",
+    "b": "12:5",
+    "e": "12:8",
+    "v": 4,
+    "reason": null
+   },
+   "3": {
+    "k": "Leviticus",
+    "b": "13:1",
+    "e": "13:5",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Metzora": {
+   "1": {
+    "k": "Leviticus",
+    "b": "14:1",
+    "e": "14:5",
+    "v": 5,
+    "reason": null
+   },
+   "2": {
+    "k": "Leviticus",
+    "b": "14:6",
+    "e": "14:9",
+    "v": 4,
+    "reason": null
+   },
+   "3": {
+    "k": "Leviticus",
+    "b": "14:10",
+    "e": "14:12",
+    "v": 3,
+    "reason": null
+   }
+  },
+  "Achrei Mot": {
+   "1": {
+    "k": "Leviticus",
+    "b": "16:1",
+    "e": "16:6",
+    "v": 6,
+    "reason": null
+   },
+   "2": {
+    "k": "Leviticus",
+    "b": "16:7",
+    "e": "16:11",
+    "v": 5,
+    "reason": null
+   },
+   "3": {
+    "k": "Leviticus",
+    "b": "16:12",
+    "e": "16:17",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Kedoshim": {
+   "1": {
+    "k": "Leviticus",
+    "b": "19:1",
+    "e": "19:4",
+    "v": 4,
+    "reason": null
+   },
+   "2": {
+    "k": "Leviticus",
+    "b": "19:5",
+    "e": "19:10",
+    "v": 6,
+    "reason": null
+   },
+   "3": {
+    "k": "Leviticus",
+    "b": "19:11",
+    "e": "19:14",
+    "v": 4,
+    "reason": null
+   }
+  },
+  "Behar": {
+   "1": {
+    "k": "Leviticus",
+    "b": "25:1",
+    "e": "25:3",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Leviticus",
+    "b": "25:4",
+    "e": "25:7",
+    "v": 4,
+    "reason": null
+   },
+   "3": {
+    "k": "Leviticus",
+    "b": "25:8",
+    "e": "25:13",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Bechukotai": {
+   "1": {
+    "k": "Leviticus",
+    "b": "26:3",
+    "e": "26:5",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Leviticus",
+    "b": "26:6",
+    "e": "26:9",
+    "v": 4,
+    "reason": null
+   },
+   "3": {
+    "k": "Leviticus",
+    "b": "26:10",
+    "e": "26:13",
+    "v": 4,
+    "reason": null
+   }
+  },
+  "Pesach Chol ha-Moed Day 1": {
+   "1": {
+    "k": "Exodus",
+    "b": "13:1",
+    "e": "13:4",
+    "v": 4,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "13:5",
+    "e": "13:10",
+    "v": 6,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "13:11",
+    "e": "13:16",
+    "v": 6,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "28:19",
+    "e": "28:25",
+    "v": 7,
+    "reason": null
+   }
+  },
+  "Pesach Chol ha-Moed Day 2": {
+   "1": {
+    "k": "Exodus",
+    "b": "22:24",
+    "e": "22:26",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "22:27",
+    "e": "23:5",
+    "v": 9,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "23:6",
+    "e": "23:19",
+    "v": 14,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "28:19",
+    "e": "28:25",
+    "v": 7,
+    "reason": null
+   }
+  },
+  "Shavuot II": {
+   "1": {
+    "k": "Deuteronomy",
+    "b": "15:19",
+    "e": "15:23",
+    "v": 5,
+    "reason": null
+   },
+   "2": {
+    "k": "Deuteronomy",
+    "b": "16:1",
+    "e": "16:3",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Deuteronomy",
+    "b": "16:4",
+    "e": "16:8",
+    "v": 5,
+    "reason": null
+   },
+   "4": {
+    "k": "Deuteronomy",
+    "b": "16:9",
+    "e": "16:12",
+    "v": 4,
+    "reason": null
+   },
+   "5": {
+    "k": "Deuteronomy",
+    "b": "16:13",
+    "e": "16:17",
+    "v": 5,
+    "reason": null
+   },
+   "M": {
+    "k": "Numbers",
+    "b": "28:26",
+    "e": "28:31",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Chukat": {
+   "1": {
+    "k": "Numbers",
+    "b": "19:1",
+    "e": "19:6",
+    "v": 6,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "19:7",
+    "e": "19:9",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "19:10",
+    "e": "19:17",
+    "v": 8,
+    "reason": null
+   }
+  },
+  "Balak": {
+   "1": {
+    "k": "Numbers",
+    "b": "22:2",
+    "e": "22:4",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "22:5",
+    "e": "22:7",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "22:8",
+    "e": "22:12",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Rosh Hashana I": {
+   "1": {
+    "k": "Genesis",
+    "b": "21:1",
+    "e": "21:4",
+    "v": 4,
+    "reason": null
+   },
+   "2": {
+    "k": "Genesis",
+    "b": "21:5",
+    "e": "21:12",
+    "v": 8,
+    "reason": null
+   },
+   "3": {
+    "k": "Genesis",
+    "b": "21:13",
+    "e": "21:21",
+    "v": 9,
+    "reason": null
+   },
+   "4": {
+    "k": "Genesis",
+    "b": "21:22",
+    "e": "21:27",
+    "v": 6,
+    "reason": null
+   },
+   "5": {
+    "k": "Genesis",
+    "b": "21:28",
+    "e": "21:34",
+    "v": 7,
+    "reason": null
+   },
+   "M": {
+    "k": "Numbers",
+    "b": "29:1",
+    "e": "29:6",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Sukkot I": {
+   "1": {
+    "k": "Leviticus",
+    "b": "22:26",
+    "e": "23:3",
+    "v": 11,
+    "reason": null
+   },
+   "2": {
+    "k": "Leviticus",
+    "b": "23:4",
+    "e": "23:14",
+    "v": 11,
+    "reason": null
+   },
+   "3": {
+    "k": "Leviticus",
+    "b": "23:15",
+    "e": "23:22",
+    "v": 8,
+    "reason": null
+   },
+   "4": {
+    "k": "Leviticus",
+    "b": "23:23",
+    "e": "23:32",
+    "v": 10,
+    "reason": null
+   },
+   "5": {
+    "k": "Leviticus",
+    "b": "23:33",
+    "e": "23:44",
+    "v": 12,
+    "reason": null
+   },
+   "M": {
+    "k": "Numbers",
+    "b": "29:12",
+    "e": "29:16",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Shmini Atzeret": {
+   "1": {
+    "k": "Deuteronomy",
+    "b": "14:22",
+    "e": "14:29",
+    "v": 8,
+    "reason": null
+   },
+   "2": {
+    "k": "Deuteronomy",
+    "b": "15:1",
+    "e": "15:18",
+    "v": 18,
+    "reason": null
+   },
+   "3": {
+    "k": "Deuteronomy",
+    "b": "15:19",
+    "e": "16:3",
+    "v": 8,
+    "reason": null
+   },
+   "4": {
+    "k": "Deuteronomy",
+    "b": "16:4",
+    "e": "16:8",
+    "v": 5,
+    "reason": null
+   },
+   "5": {
+    "k": "Deuteronomy",
+    "b": "16:9",
+    "e": "16:17",
+    "v": 9,
+    "reason": null
+   },
+   "M": {
+    "k": "Numbers",
+    "b": "29:35",
+    "e": "30:1",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Erev Simchat Torah": {
+   "1": {
+    "k": "Deuteronomy",
+    "b": "33:1",
+    "e": "33:7",
+    "v": 7,
+    "reason": null
+   },
+   "2": {
+    "k": "Deuteronomy",
+    "b": "33:8",
+    "e": "33:12",
+    "v": 5,
+    "reason": null
+   },
+   "3": {
+    "k": "Deuteronomy",
+    "b": "33:13",
+    "e": "33:17",
+    "v": 5,
+    "reason": null
+   }
+  },
+  "Miketz": {
+   "1": {
+    "k": "Genesis",
+    "b": "41:1",
+    "e": "41:4",
+    "v": 4,
+    "reason": null
+   },
+   "2": {
+    "k": "Genesis",
+    "b": "41:5",
+    "e": "41:7",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Genesis",
+    "b": "41:8",
+    "e": "41:14",
+    "v": 7,
+    "reason": null
+   }
+  },
+  "Chanukah Day 1": {
+   "1": {
+    "k": "Numbers",
+    "b": "7:1",
+    "e": "7:11",
+    "v": 11,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "7:12",
+    "e": "7:14",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "7:15",
+    "e": "7:17",
+    "v": 3,
+    "reason": null
+   }
+  },
+  "Chanukah Day 8": {
+   "1": {
+    "k": "Numbers",
+    "b": "7:54",
+    "e": "7:56",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "7:57",
+    "e": "7:59",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "7:60",
+    "e": "8:4",
+    "v": 34,
+    "reason": null
+   }
+  },
+  "Pesach Chol ha-Moed Day 3": {
+   "1": {
+    "k": "Exodus",
+    "b": "34:1",
+    "e": "34:10",
+    "v": 10,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "34:11",
+    "e": "34:17",
+    "v": 7,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "34:18",
+    "e": "34:26",
+    "v": 9,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "28:19",
+    "e": "28:25",
+    "v": 7,
+    "reason": null
+   }
+  },
+  "Nitzavim": {
+   "1": {
+    "k": "Deuteronomy",
+    "b": "29:9",
+    "e": "29:11",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Deuteronomy",
+    "b": "29:12",
+    "e": "29:14",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Deuteronomy",
+    "b": "29:15",
+    "e": "29:28",
+    "v": 14,
+    "reason": null
+   }
+  },
+  "Vayeilech": {
+   "1": {
+    "k": "Deuteronomy",
+    "b": "31:1",
+    "e": "31:3",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Deuteronomy",
+    "b": "31:4",
+    "e": "31:6",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Deuteronomy",
+    "b": "31:7",
+    "e": "31:13",
+    "v": 7,
+    "reason": null
+   }
+  },
+  "Matot": {
+   "1": {
+    "k": "Numbers",
+    "b": "30:2",
+    "e": "30:9",
+    "v": 8,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "30:10",
+    "e": "30:13",
+    "v": 4,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "30:14",
+    "e": "30:17",
+    "v": 4,
+    "reason": null
+   }
+  },
+  "Masei": {
+   "1": {
+    "k": "Numbers",
+    "b": "33:1",
+    "e": "33:3",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "33:4",
+    "e": "33:6",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "33:7",
+    "e": "33:10",
+    "v": 4,
+    "reason": null
+   }
+  },
+  "Chanukah Day 7": {
+   "1": {
+    "k": "Numbers",
+    "b": "7:48",
+    "e": "7:50",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "7:51",
+    "e": "7:53",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "7:54",
+    "e": "7:59",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Shushan Purim": {
+   "1": {
+    "k": "Exodus",
+    "b": "17:8",
+    "e": "17:10",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "17:11",
+    "e": "17:13",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "17:14",
+    "e": "17:16",
+    "v": 3,
+    "reason": null
+   }
+  },
+  "Pesach II (CH''M)": {
+   "1": {
+    "k": "Leviticus",
+    "b": "22:26",
+    "e": "23:8",
+    "v": 16,
+    "reason": null
+   },
+   "2": {
+    "k": "Leviticus",
+    "b": "23:9",
+    "e": "23:14",
+    "v": 6,
+    "reason": null
+   },
+   "3": {
+    "k": "Leviticus",
+    "b": "23:15",
+    "e": "23:44",
+    "v": 30,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "28:19",
+    "e": "28:25",
+    "v": 7,
+    "reason": null
+   }
+  },
+  "Pesach IV (CH''M)": {
+   "1": {
+    "k": "Exodus",
+    "b": "22:24",
+    "e": "22:26",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "22:27",
+    "e": "23:5",
+    "v": 9,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "23:6",
+    "e": "23:19",
+    "v": 14,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "28:19",
+    "e": "28:25",
+    "v": 7,
+    "reason": null
+   }
+  },
+  "Pesach V (CH''M)": {
+   "1": {
+    "k": "Exodus",
+    "b": "34:1",
+    "e": "34:10",
+    "v": 10,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "34:11",
+    "e": "34:17",
+    "v": 7,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "34:18",
+    "e": "34:26",
+    "v": 9,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "28:19",
+    "e": "28:25",
+    "v": 7,
+    "reason": null
+   }
+  },
+  "Pesach VI (CH''M)": {
+   "1": {
+    "k": "Numbers",
+    "b": "9:1",
+    "e": "9:5",
+    "v": 5,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "9:6",
+    "e": "9:8",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "9:9",
+    "e": "9:14",
+    "v": 6,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "28:19",
+    "e": "28:25",
+    "v": 7,
+    "reason": null
+   }
+  },
+  "Shavuot": {
+   "1": {
+    "k": "Exodus",
+    "b": "19:1",
+    "e": "19:6",
+    "v": 6,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "19:7",
+    "e": "19:13",
+    "v": 7,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "19:14",
+    "e": "19:19",
+    "v": 6,
+    "reason": null
+   },
+   "4": {
+    "k": "Exodus",
+    "b": "19:20",
+    "e": "20:14",
+    "v": 20,
+    "reason": null
+   },
+   "5": {
+    "k": "Exodus",
+    "b": "20:15",
+    "e": "20:23",
+    "v": 9,
+    "reason": null
+   },
+   "M": {
+    "k": "Numbers",
+    "b": "28:26",
+    "e": "28:31",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Sukkot Chol ha-Moed Day 5": {
+   "1": {
+    "k": "Numbers",
+    "b": "29:29",
+    "e": "29:31",
+    "v": 3,
+    "reason": null
+   },
+   "2": {
+    "k": "Numbers",
+    "b": "29:32",
+    "e": "29:34",
+    "v": 3,
+    "reason": null
+   },
+   "3": {
+    "k": "Numbers",
+    "b": "29:35",
+    "e": "29:37",
+    "v": 3,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "29:29",
+    "e": "29:34",
+    "v": 6,
+    "reason": null
+   }
+  },
+  "Pesach III (CH''M)": {
+   "1": {
+    "k": "Exodus",
+    "b": "13:1",
+    "e": "13:4",
+    "v": 4,
+    "reason": null
+   },
+   "2": {
+    "k": "Exodus",
+    "b": "13:5",
+    "e": "13:10",
+    "v": 6,
+    "reason": null
+   },
+   "3": {
+    "k": "Exodus",
+    "b": "13:11",
+    "e": "13:16",
+    "v": 6,
+    "reason": null
+   },
+   "4": {
+    "k": "Numbers",
+    "b": "28:19",
+    "e": "28:25",
+    "v": 7,
+    "reason": null
+   }
+  }
+ },
+ "ranges": [
+  "Deuteronomy 11:26-11:31",
+  "Deuteronomy 11:32-12:5",
+  "Deuteronomy 12:6-12:10",
+  "Deuteronomy 14:22-14:29",
+  "Deuteronomy 15:1-15:18",
+  "Deuteronomy 15:19-15:23",
+  "Deuteronomy 15:19-16:3",
+  "Deuteronomy 16:1-16:3",
+  "Deuteronomy 16:13-16:17",
+  "Deuteronomy 16:18-16:20",
+  "Deuteronomy 16:21-17:10",
+  "Deuteronomy 16:4-16:8",
+  "Deuteronomy 16:9-16:12",
+  "Deuteronomy 16:9-16:17",
+  "Deuteronomy 17:11-17:13",
+  "Deuteronomy 1:1-1:3",
+  "Deuteronomy 1:4-1:7",
+  "Deuteronomy 1:8-1:11",
+  "Deuteronomy 21:10-21:14",
+  "Deuteronomy 21:15-21:17",
+  "Deuteronomy 21:18-21:21",
+  "Deuteronomy 26:1-26:3",
+  "Deuteronomy 26:12-26:15",
+  "Deuteronomy 26:4-26:11",
+  "Deuteronomy 29:12-29:14",
+  "Deuteronomy 29:15-29:28",
+  "Deuteronomy 29:9-29:11",
+  "Deuteronomy 31:1-31:3",
+  "Deuteronomy 31:4-31:6",
+  "Deuteronomy 31:7-31:13",
+  "Deuteronomy 32:1-32:3",
+  "Deuteronomy 32:4-32:6",
+  "Deuteronomy 32:7-32:12",
+  "Deuteronomy 33:1-33:7",
+  "Deuteronomy 33:13-33:17",
+  "Deuteronomy 33:18-33:21",
+  "Deuteronomy 33:22-33:26",
+  "Deuteronomy 33:27-34:12",
+  "Deuteronomy 33:8-33:12",
+  "Deuteronomy 3:23-3:25",
+  "Deuteronomy 3:26-4:4",
+  "Deuteronomy 4:25-4:29",
+  "Deuteronomy 4:30-4:35",
+  "Deuteronomy 4:36-4:40",
+  "Deuteronomy 4:5-4:8",
+  "Deuteronomy 7:12-7:21",
+  "Deuteronomy 7:22-8:3",
+  "Deuteronomy 8:4-8:10",
+  "Deuteronomy 8:4-8:18",
+  "Exodus 10:1-10:3",
+  "Exodus 10:4-10:6",
+  "Exodus 10:7-10:11",
+  "Exodus 12:21-12:24",
+  "Exodus 12:25-12:28",
+  "Exodus 12:29-12:36",
+  "Exodus 12:37-12:42",
+  "Exodus 12:43-12:51",
+  "Exodus 13:1-13:4",
+  "Exodus 13:11-13:16",
+  "Exodus 13:17-13:22",
+  "Exodus 13:5-13:10",
+  "Exodus 14:1-14:4",
+  "Exodus 14:1-14:8",
+  "Exodus 14:15-14:25",
+  "Exodus 14:26-15:26",
+  "Exodus 14:5-14:8",
+  "Exodus 14:9-14:14",
+  "Exodus 17:11-17:13",
+  "Exodus 17:14-17:16",
+  "Exodus 17:8-17:10",
+  "Exodus 18:1-18:4",
+  "Exodus 18:5-18:8",
+  "Exodus 18:9-18:12",
+  "Exodus 19:1-19:6",
+  "Exodus 19:14-19:19",
+  "Exodus 19:20-20:14",
+  "Exodus 19:7-19:13",
+  "Exodus 1:1-1:7",
+  "Exodus 1:13-1:17",
+  "Exodus 1:8-1:12",
+  "Exodus 20:15-20:23",
+  "Exodus 21:1-21:6",
+  "Exodus 21:12-21:19",
+  "Exodus 21:7-21:11",
+  "Exodus 22:24-22:26",
+  "Exodus 22:27-23:5",
+  "Exodus 23:6-23:19",
+  "Exodus 25:1-25:5",
+  "Exodus 25:10-25:16",
+  "Exodus 25:6-25:9",
+  "Exodus 27:20-28:5",
+  "Exodus 28:10-28:12",
+  "Exodus 28:6-28:9",
+  "Exodus 30:11-30:13",
+  "Exodus 30:14-30:16",
+  "Exodus 30:17-30:21",
+  "Exodus 32:11-32:14",
+  "Exodus 34:1-34:10",
+  "Exodus 34:1-34:3",
+  "Exodus 34:11-34:17",
+  "Exodus 34:18-34:26",
+  "Exodus 34:4-34:10",
+  "Exodus 35:1-35:3",
+  "Exodus 35:11-35:20",
+  "Exodus 35:4-35:10",
+  "Exodus 38:21-38:23",
+  "Exodus 38:24-38:27",
+  "Exodus 38:28-39:1",
+  "Exodus 6:10-6:13",
+  "Exodus 6:2-6:5",
+  "Exodus 6:6-6:9",
+  "Genesis 12:1-12:3",
+  "Genesis 12:10-12:13",
+  "Genesis 12:4-12:9",
+  "Genesis 18:1-18:5",
+  "Genesis 18:6-18:8",
+  "Genesis 18:9-18:14",
+  "Genesis 1:1-1:5",
+  "Genesis 1:1-2:3",
+  "Genesis 1:6-1:8",
+  "Genesis 1:9-1:13",
+  "Genesis 21:1-21:4",
+  "Genesis 21:13-21:21",
+  "Genesis 21:22-21:27",
+  "Genesis 21:28-21:34",
+  "Genesis 21:5-21:12",
+  "Genesis 22:1-22:3",
+  "Genesis 22:15-22:19",
+  "Genesis 22:20-22:24",
+  "Genesis 22:4-22:8",
+  "Genesis 22:9-22:14",
+  "Genesis 23:1-23:7",
+  "Genesis 23:13-23:16",
+  "Genesis 23:8-23:12",
+  "Genesis 25:19-25:22",
+  "Genesis 25:23-25:26",
+  "Genesis 25:27-26:5",
+  "Genesis 28:10-28:12",
+  "Genesis 28:13-28:17",
+  "Genesis 28:18-28:22",
+  "Genesis 32:10-32:13",
+  "Genesis 32:4-32:6",
+  "Genesis 32:7-32:9",
+  "Genesis 37:1-37:3",
+  "Genesis 37:4-37:7",
+  "Genesis 37:8-37:11",
+  "Genesis 41:1-41:4",
+  "Genesis 41:5-41:7",
+  "Genesis 41:8-41:14",
+  "Genesis 44:18-44:20",
+  "Genesis 44:21-44:24",
+  "Genesis 44:25-44:30",
+  "Genesis 47:28-47:31",
+  "Genesis 48:1-48:3",
+  "Genesis 48:4-48:9",
+  "Genesis 6:17-6:19",
+  "Genesis 6:20-6:22",
+  "Genesis 6:9-6:16",
+  "Leviticus 12:1-12:4",
+  "Leviticus 12:5-12:8",
+  "Leviticus 13:1-13:5",
+  "Leviticus 14:1-14:5",
+  "Leviticus 14:10-14:12",
+  "Leviticus 14:6-14:9",
+  "Leviticus 16:1-16:6",
+  "Leviticus 16:12-16:17",
+  "Leviticus 16:18-16:24",
+  "Leviticus 16:25-16:30",
+  "Leviticus 16:31-16:34",
+  "Leviticus 16:7-16:11",
+  "Leviticus 18:1-18:5",
+  "Leviticus 18:22-18:30",
+  "Leviticus 18:6-18:21",
+  "Leviticus 19:1-19:4",
+  "Leviticus 19:11-19:14",
+  "Leviticus 19:5-19:10",
+  "Leviticus 1:1-1:4",
+  "Leviticus 1:10-1:13",
+  "Leviticus 1:5-1:9",
+  "Leviticus 21:1-21:6",
+  "Leviticus 21:13-21:15",
+  "Leviticus 21:7-21:12",
+  "Leviticus 22:26-23:3",
+  "Leviticus 22:26-23:8",
+  "Leviticus 23:15-23:22",
+  "Leviticus 23:15-23:44",
+  "Leviticus 23:23-23:32",
+  "Leviticus 23:33-23:44",
+  "Leviticus 23:4-23:14",
+  "Leviticus 23:9-23:14",
+  "Leviticus 25:1-25:3",
+  "Leviticus 25:4-25:7",
+  "Leviticus 25:8-25:13",
+  "Leviticus 26:10-26:13",
+  "Leviticus 26:3-26:5",
+  "Leviticus 26:6-26:9",
+  "Leviticus 6:1-6:3",
+  "Leviticus 6:4-6:6",
+  "Leviticus 6:7-6:11",
+  "Leviticus 9:1-9:6",
+  "Leviticus 9:11-9:16",
+  "Leviticus 9:7-9:10",
+  "Numbers 13:1-13:3",
+  "Numbers 13:17-13:20",
+  "Numbers 13:4-13:16",
+  "Numbers 16:1-16:3",
+  "Numbers 16:4-16:7",
+  "Numbers 16:8-16:13",
+  "Numbers 19:1-19:6",
+  "Numbers 19:10-19:17",
+  "Numbers 19:7-19:9",
+  "Numbers 1:1-1:4",
+  "Numbers 1:17-1:19",
+  "Numbers 1:5-1:16",
+  "Numbers 22:2-22:4",
+  "Numbers 22:5-22:7",
+  "Numbers 22:8-22:12",
+  "Numbers 25:10-25:12",
+  "Numbers 25:13-25:15",
+  "Numbers 25:16-26:4",
+  "Numbers 28:1-28:3",
+  "Numbers 28:1-28:5",
+  "Numbers 28:11-28:15",
+  "Numbers 28:16-28:25",
+  "Numbers 28:19-28:25",
+  "Numbers 28:26-28:31",
+  "Numbers 28:3-28:5",
+  "Numbers 28:6-28:10",
+  "Numbers 29:1-29:6",
+  "Numbers 29:12-29:16",
+  "Numbers 29:17-29:19",
+  "Numbers 29:17-29:22",
+  "Numbers 29:20-29:22",
+  "Numbers 29:20-29:25",
+  "Numbers 29:23-29:25",
+  "Numbers 29:23-29:28",
+  "Numbers 29:26-29:28",
+  "Numbers 29:26-29:31",
+  "Numbers 29:29-29:31",
+  "Numbers 29:29-29:34",
+  "Numbers 29:32-29:34",
+  "Numbers 29:35-29:37",
+  "Numbers 29:35-30:1",
+  "Numbers 29:7-29:11",
+  "Numbers 30:10-30:13",
+  "Numbers 30:14-30:17",
+  "Numbers 30:2-30:9",
+  "Numbers 33:1-33:3",
+  "Numbers 33:4-33:6",
+  "Numbers 33:7-33:10",
+  "Numbers 4:21-4:24",
+  "Numbers 4:25-4:28",
+  "Numbers 4:29-4:33",
+  "Numbers 7:1-7:11",
+  "Numbers 7:12-7:14",
+  "Numbers 7:15-7:17",
+  "Numbers 7:18-7:20",
+  "Numbers 7:21-7:23",
+  "Numbers 7:24-7:26",
+  "Numbers 7:24-7:29",
+  "Numbers 7:27-7:29",
+  "Numbers 7:30-7:32",
+  "Numbers 7:30-7:35",
+  "Numbers 7:33-7:35",
+  "Numbers 7:36-7:38",
+  "Numbers 7:36-7:41",
+  "Numbers 7:39-7:41",
+  "Numbers 7:42-7:47",
+  "Numbers 7:48-7:50",
+  "Numbers 7:48-7:53",
+  "Numbers 7:51-7:53",
+  "Numbers 7:54-7:56",
+  "Numbers 7:54-7:59",
+  "Numbers 7:57-7:59",
+  "Numbers 7:60-8:4",
+  "Numbers 8:1-8:4",
+  "Numbers 8:10-8:14",
+  "Numbers 8:5-8:9",
+  "Numbers 9:1-9:5",
+  "Numbers 9:6-9:8",
+  "Numbers 9:9-9:14"
+ ]
+}

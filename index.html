@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>סידור</title>
+<meta name="theme-color" content="#f7f3ea">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+@font-face{font-family:Keter;src:url(fonts/keter.woff2)format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:Keter;src:url(fonts/keter-bold.woff2)format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:Shofar;src:url(fonts/shofar.woff2)format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:Shofar;src:url(fonts/shofar-bold.woff2)format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:Frank;src:url(fonts/frank.woff2)format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:Stam;src:url(fonts/stam.woff2)format('woff2');font-weight:400;font-display:swap}
+
+:root{
+  --size:20px;
+  --ink:#1b1714; --ink-soft:#6b6055; --ink-faint:#9b9186;
+  --bg:#f7f3ea; --card:#fffdf7; --line:#e2d9c8;
+  --gold:#8a6a1f; --gold-bg:#f5ecd4;
+  --blue:#2a4d6e;
+  --body:Keter,'Frank Ruehl CLM','Times New Roman',serif;
+}
+:root[data-font=shofar]{--body:Shofar,serif}
+:root[data-font=frank]{--body:Frank,serif}
+:root[data-font=stam]{--body:Stam,serif}
+:root:not([data-theme=light]) @media(prefers-color-scheme:dark){}
+@media(prefers-color-scheme:dark){
+  :root:not([data-theme=light]){
+    --ink:#eee7db; --ink-soft:#a99e8e; --ink-faint:#7d7466;
+    --bg:#15130f; --card:#1d1a15; --line:#332e25;
+    --gold:#d6b158; --gold-bg:#2b2413; --blue:#8fb4d6;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg); color:var(--ink);
+  font-family:var(--body);
+  -webkit-text-size-adjust:100%;
+}
+header{
+  position:sticky; top:0; z-index:10;
+  background:color-mix(in srgb,var(--bg) 92%,transparent);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+  padding:.6rem .9rem .1rem;
+}
+.top{display:flex; align-items:baseline; gap:.6rem; flex-wrap:wrap}
+#hdate{font-size:1.35rem; font-weight:700; letter-spacing:.01em}
+#gdate{color:var(--ink-soft); font-size:.92rem}
+.btns{margin-inline-start:auto; display:flex; gap:.35rem; flex:none}
+#index-toggle,#settings-toggle{
+  background:none; border:1px solid var(--line);
+  color:var(--ink-soft); border-radius:999px; padding:.2rem .7rem;
+  font:inherit; font-size:.85rem; cursor:pointer;
+}
+#now{display:flex; align-items:baseline; gap:.5rem; margin-top:.35rem;
+  font-size:.9rem; flex-wrap:wrap}
+#now b{color:var(--gold); font-weight:700}
+#now i{font-style:normal; color:var(--ink-soft)}
+#now u{text-decoration:none; color:var(--ink-faint); font-size:.8rem;
+  margin-inline-start:auto; font-variant-numeric:tabular-nums}
+.relink{background:none; border:1px solid var(--line); color:var(--ink-soft);
+  border-radius:999px; padding:.1rem .55rem; font:inherit; font-size:.75rem;
+  cursor:pointer}
+#tags{display:flex; flex-wrap:wrap; gap:.3rem; margin:.45rem 0 .1rem}
+.tag{font-size:.78rem; padding:.12rem .55rem; border-radius:999px;
+  border:1px solid var(--line); color:var(--ink-soft); white-space:nowrap}
+.tag.ev{background:var(--gold-bg); color:var(--gold); border-color:transparent}
+.tag.ok{color:var(--blue); border-color:color-mix(in srgb,var(--blue) 35%,transparent)}
+.tag.off{opacity:.65; text-decoration:line-through}
+.tag.omer{color:var(--gold)}
+
+#tabs{display:flex; gap:.1rem; margin-top:.5rem; overflow-x:auto;
+  scrollbar-width:none}
+#tabs::-webkit-scrollbar{display:none}
+.tab{background:none; border:0; border-bottom:2px solid transparent;
+  color:var(--ink-soft); font:inherit; font-size:1rem; padding:.35rem .7rem .5rem;
+  cursor:pointer; white-space:nowrap}
+.tab.on{color:var(--ink); border-bottom-color:var(--gold); font-weight:700}
+
+/* --- today's changes, and zmanim --- */
+#panel{padding:.7rem .9rem 0; max-width:44rem; margin:0 auto}
+#changes{display:flex; flex-direction:column; gap:.18rem;
+  background:var(--card); border:1px solid var(--line); border-radius:.7rem;
+  padding:.6rem .8rem; margin-bottom:.6rem}
+.chg{display:flex; gap:.5rem; align-items:baseline; font-size:.95rem}
+.chg b{font-weight:700}
+.chg i{font-style:normal; color:var(--ink-faint); font-size:.82rem;
+  margin-inline-start:auto; text-align:end}
+#zmanim{display:grid; grid-template-columns:repeat(4,1fr); gap:.35rem .5rem;
+  margin-bottom:.7rem}
+.z{display:flex; flex-direction:column; align-items:center;
+  font-size:.8rem; color:var(--ink-faint)}
+.z b{font-weight:600; color:var(--ink-soft); font-size:.95rem;
+  font-variant-numeric:tabular-nums}
+
+/* --- the text --- */
+#doc{max-width:44rem; margin:0 auto; padding:0 .9rem 6rem}
+.sec{margin:0 0 1.6rem;
+  /* Shacharit is ~95,000px tall; let the browser skip what is off-screen. */
+  content-visibility:auto; contain-intrinsic-size:auto 600px}
+.sec h2{font-size:1.05rem; font-weight:700; color:var(--gold);
+  margin:1.6rem 0 .5rem; padding-bottom:.25rem;
+  border-bottom:1px solid var(--line); letter-spacing:.02em}
+.sec h3.aliyah{font-size:.9rem; color:var(--ink-faint); font-weight:400;
+  margin:1rem 0 .3rem}
+.divider{text-align:center; color:var(--gold); font-weight:700;
+  margin:2.2rem 0 .6rem; font-size:1.05rem;
+  border-block:1px solid var(--line); padding:.5rem 0}
+
+p.t, p.flow{
+  font-size:var(--size); line-height:1.95; margin:0 0 .85rem;
+  text-align:start;
+}
+p.t b, p.flow b{font-weight:700}
+p.why{color:var(--ink-faint); font-size:.85rem; margin:.1rem 0 .6rem}
+p.note{
+  font-size:.82rem; line-height:1.7; color:var(--ink-faint);
+  border-inline-start:2px solid var(--line); padding-inline-start:.7rem;
+  margin:.5rem 0 .9rem;
+}
+p.empty{color:var(--ink-faint); text-align:center; padding:3rem 0}
+
+.rubric{font-size:.78rem; color:var(--gold); font-family:system-ui,sans-serif}
+.rubric-line{margin:.6rem 0 .2rem}
+.rubric.off{color:var(--ink-faint); opacity:.7}
+
+/* An insertion that applies today is marked, so you can see the siddur's
+   work rather than trusting it. */
+.ins-on{
+  background:linear-gradient(transparent 72%,var(--gold-bg) 72%);
+  border-radius:2px;
+}
+.ins-off{display:none}
+#doc.show-variants .ins-off{
+  display:inline; opacity:.4; text-decoration:line-through;
+  text-decoration-color:color-mix(in srgb,var(--ink-faint) 60%,transparent);
+}
+.unresolved{border-bottom:1px dotted var(--ink-faint)}
+.taamim{line-height:2.15}
+
+/* --- settings --- */
+#index-wrap{display:none; max-height:60vh; overflow-y:auto; padding:.5rem 0 .8rem;
+  border-top:1px solid var(--line); max-width:44rem; margin:0 auto}
+#index-wrap.open{display:block}
+#index{display:flex; flex-direction:column}
+.ix{background:none; border:0; color:var(--ink-soft); font:inherit;
+  font-size:.95rem; text-align:start; padding:.32rem .3rem; cursor:pointer;
+  border-radius:.3rem}
+.ix:hover{background:var(--card); color:var(--ink)}
+.ix.major{color:var(--gold); font-weight:700; margin-top:.4rem}
+#settings{display:none; padding:.8rem .9rem 1rem; max-width:44rem;
+  margin:0 auto; border-top:1px solid var(--line)}
+#settings.open{display:block}
+.row{display:flex; align-items:center; gap:.6rem; margin:.55rem 0;
+  font-size:.92rem}
+.row label{color:var(--ink-soft); min-width:7.5rem}
+select,input[type=range]{font:inherit; font-size:.92rem}
+select{background:var(--card); color:var(--ink); border:1px solid var(--line);
+  border-radius:.4rem; padding:.25rem .5rem}
+button.mini{background:var(--card); border:1px solid var(--line);
+  color:var(--ink); border-radius:.4rem; padding:.25rem .7rem;
+  font:inherit; font-size:.88rem; cursor:pointer}
+#locname{color:var(--ink-faint); font-size:.85rem}
+footer{max-width:44rem; margin:0 auto; padding:2rem .9rem 3rem;
+  color:var(--ink-faint); font-size:.78rem; line-height:1.6;
+  font-family:system-ui,sans-serif; border-top:1px solid var(--line)}
+footer a{color:inherit}
+</style>
+</head>
+<body>
+<header>
+  <div class="top">
+    <span id="hdate"></span>
+    <span id="gdate"></span>
+    <span class="btns"><button id="index-toggle">תֹּכֶן</button><button
+      id="settings-toggle">הַגְדָּרוֹת</button></span>
+  </div>
+  <div id="now"></div>
+  <div id="tags"></div>
+  <div id="tabs"></div>
+  <div id="index-wrap"><div id="index"></div></div>
+  <div id="settings">
+    <div class="row"><label for="nusach">נֻסָּח</label>
+      <select id="nusach">
+        <option value="ashkenaz">אַשְׁכְּנַז</option>
+        <option value="sefard">סְפָרַד</option>
+        <option value="edot">עֲדוֹת הַמִּזְרָח</option>
+      </select></div>
+    <div class="row"><label for="font">גּוֹפָן</label>
+      <select id="font">
+        <option value="keter">כֶּתֶר</option>
+        <option value="shofar">שׁוֹפָר</option>
+        <option value="frank">פְרַנְק־רִיהְל</option>
+        <option value="stam">אַשּׁוּרִית (סְתָ״ם)</option>
+      </select></div>
+    <div class="row"><label for="size">גֹּדֶל</label>
+      <input type="range" id="size" min="15" max="34" step="1"></div>
+    <div class="row"><label for="israel">אֶרֶץ יִשְׂרָאֵל</label>
+      <input type="checkbox" id="israel"></div>
+    <div class="row"><label for="minyan">בְּמִנְיָן</label>
+      <input type="checkbox" id="minyan"></div>
+    <div class="row"><label for="notes">הֲלָכוֹת</label>
+      <input type="checkbox" id="notes"></div>
+    <div class="row"><label for="variants">הַצֵּג כָּל הַנֻּסָּחִים</label>
+      <input type="checkbox" id="variants"></div>
+    <div class="row"><label>מִקּוּם</label>
+      <button class="mini" id="locate">אַתֵּר</button>
+      <span id="locname">יְרוּשָׁלַיִם</span></div>
+  </div>
+</header>
+
+<div id="panel">
+  <div id="changes"></div>
+  <div id="zmanim"></div>
+</div>
+
+<main id="doc"></main>
+
+<footer>
+  <p><b>נוסחי התפילה</b> — אשכנז וספרד: סידור מצודה 1981 (CC BY) ותורת אמת
+  (נחלת הכלל); עדות המזרח: מהדורת שאליהסבו (CC0). דרך
+  <a href="https://www.sefaria.org/">ספריא</a>.
+  <b>קריאת התורה</b> — תנ״ך עם טעמי המקרא, נחלת הכלל.
+  <b>גופנים</b> — <a href="https://culmus.sourceforge.io/">קולמוס</a> (GPL-2.0
+  עם חריג גופנים).</p>
+  <p>לוח השנה והזמנים מחושבים ב־@hebcal/core וב־kosher-zmanim.
+  זהו נוסח מודפס אחד לכל מנהג; קהילות נבדלות זו מזו. נהגו כמנהג מקומכם.</p>
+</footer>
+
+<script src="bundle.js"></script>
+<script>window.__siddur.boot();</script>
+</body>
+</html>
