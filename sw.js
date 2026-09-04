@@ -5,7 +5,7 @@
  * to whatever version they first loaded.  The text, fonts and calendar data
  * are large and effectively immutable, so those are cache-first.
  */
-const V = 'siddur-v3';
+const V = 'siddur-v4';
 const SHELL = ['./', 'index.html', 'bundle.js', 'manifest.webmanifest'];
 const DURABLE = /\/(data|fonts)\/|icon-\d+\.png$/;
 
@@ -34,7 +34,10 @@ self.addEventListener('fetch', (e) => {
     return;
   }
 
-  e.respondWith(fetch(req).then((res) => {
+  // Revalidate against the origin rather than the browser's HTTP cache:
+  // GitHub Pages serves HTML with max-age=600, so without this a deploy would
+  // not reach anyone for ten minutes even though this is network-first.
+  e.respondWith(fetch(req, { cache: 'no-cache' }).then((res) => {
     if (res.ok) { const c = res.clone(); caches.open(V).then((k) => k.put(req, c)); }
     return res;
   }).catch(() => caches.match(req).then((hit) => hit || caches.match('index.html'))));
