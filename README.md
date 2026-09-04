@@ -5,6 +5,8 @@ time of day and quietly resolves everything that changes with the date — Ya'al
 v'Yavo, Al HaNisim, the seasonal insertions, Hallel, Musaf, Tachanun, the shir
 shel yom, and the Torah reading.
 
+**→ https://hereiszee.github.io/siddur/**
+
 Installable to a phone's home screen and fully offline after the first visit.
 
 ## What it does
