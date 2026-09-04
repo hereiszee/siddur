@@ -83,25 +83,45 @@ The app names which one applies.
 
 ## Typography
 
-Body text is **Noto Serif Hebrew** (SIL OFL) — chosen over the Culmus faces
-after setting them side by side at reading size, because its stems carry more
-weight and its nikud sits further off the letters, which is most of what makes
-pointed Hebrew legible on a phone. **Shofar** and **Frank Ruehl CLM** are
-offered as alternatives; Frank Ruehl is the classic Hebrew book face and the
-most traditional of the three, at the cost of being the lightest.
+Body text is **Noto Sans Hebrew** (SIL OFL), chosen for legibility after
+setting the candidates side by side at reading size — see
+[`/specimen/`](https://hereiszee.github.io/siddur/specimen/). Noto Serif
+Hebrew, Shofar and Frank Ruehl CLM are alternatives.
 
-All three carry full cantillation coverage, which matters more than it sounds:
-Frank Ruhl Libre and David Libre, the obvious Google Fonts choices, ship
-**zero** of the 31 ta'amei hamikra and would silently drop every mark in the
-Torah reading.
+What the font can draw decided what could even be considered, and the
+constraint is stricter than it looks:
 
-**Stam Ashkenaz CLM** is offered as an Ashurit display option. It is a genuine
-STA"M face, and it is worth knowing that STA"M script was designed for a sofer's
-quill and without nikud — it is beautiful and it is not what you want to daven
-from at 6:40am. Hence the default.
+- **Meteg is 3% of every letter in this text** — 18,290 of them. Assistant,
+  Heebo, IBM Plex Sans Hebrew, David Libre, Alef and Rubik all omit it, and
+  would have dropped every one silently.
+- **The siddur body carries 19,754 cantillation marks**, not just the Torah
+  reading: the Metsudah uses U+0592 as a shva-na marker, and the verses the
+  siddur quotes — Shema, Ashrei, Az Yashir — keep their full ta'amim. So
+  Frank Ruhl Libre and Tinos, which ship none of the 31, break the siddur
+  itself and not only the leyning.
 
-A specimen of the candidates is at
-[`/specimen/`](https://hereiszee.github.io/siddur/specimen/).
+**Ashurit draws no points at all.** Stam Ashkenaz CLM maps every nikud and
+ta'am to an *empty glyph* — present in the cmap, drawing nothing. That is
+correct for a STA"M face, since a sefer Torah is unpointed, but it means
+Ashurit cannot show ta'amei hamikra, and it must never be the body face: as a
+body font it silently strips the vowels out of the siddur.
+
+So Ashurit is a **Torah-reading mode** instead. The reading can be shown
+pointed with ta'amim, in Ashurit as the sefer has it, or both at once — which
+is what a tikkun korim is.
+
+## On a phone
+
+Installs to the homescreen as a standalone app: maskable icon, scoped
+manifest, theme colour that follows light and dark, and safe-area insets so
+the header clears the notch and the text clears the home indicator. Offline
+after the first visit. There is an optional screen-wake toggle, because a
+screen that sleeps in the middle of the Amidah is its own small problem.
+
+A rail of landmarks — הַשְׁכָּמַת הַבֹּקֶר, פְּסוּקֵי דְזִמְרָא, עֲמִידָה, קְרִיאַת הַתּוֹרָה,
+הַלֵּל, מוּסָף — sits on the left edge for jumping around a long service, and
+tracks where you are; the header names the section you are in. "תֹּכֶן" opens
+the full list.
 
 ## Layout
 

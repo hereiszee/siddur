@@ -17,12 +17,16 @@ const store = {
 /* Keter YG was the original default; it reads thin on a phone and its nikud
  * crowds the letters, so anyone still carrying that preference is moved over --
  * and the move is written back, so this runs once rather than every load. */
-const DROPPED_FONTS = ['keter', 'hadasim'];
+/* Keter YG read thin at phone sizes.  Stam was worse than thin: it maps every
+ * nikud and ta'am to an empty glyph, so choosing it as the body face silently
+ * stripped the vowels out of the siddur.  It survives as a leyning mode, where
+ * unpointed is what a sefer Torah actually looks like. */
+const DROPPED_FONTS = ['keter', 'hadasim', 'stam'];
 
 function migrateFont(store) {
-  let f = store.get('font', 'notoserif');
+  let f = store.get('font', 'notosans');
   if (DROPPED_FONTS.includes(f)) {
-    f = 'notoserif';
+    f = 'notosans';
     store.set('font', f);
   }
   return f;
@@ -34,7 +38,9 @@ const S = {
   minyan:   store.get('minyan', true),
   notes:    store.get('notes', true),
   variants: store.get('variants', false),
-  font:     'notoserif',   // replaced below, once the store is readable
+  tikkun:   store.get('tikkun', 'menukad'),
+  wake:     store.get('wake', false),
+  font:     'notosans',    // replaced below, once the store is readable
   size:     store.get('size', 21),
   loc:      store.get('loc', null),
   service:  null,
@@ -161,12 +167,31 @@ function renderLeyning() {
   wrap.appendChild(el('p', 'why', main.he + ' · ' + main.summary));
   for (const a of main.aliyot) {
     wrap.appendChild(el('h3', 'aliyah', aliyahName(a.n)));
-    const p = el('p', 't taamim');
-    p.innerHTML = a.verses.join(' ');
-    wrap.appendChild(p);
+    const text = a.verses.join(' ');
+    const box = el('div', 'tikkun');
+    if (S.tikkun === 'both') {
+      box.appendChild(el('div', 'lbl', 'מְנֻקָּד'));
+      box.appendChild(el('p', 't taamim', text));
+      box.appendChild(el('div', 'lbl', 'כְּתָב אַשּׁוּרִי'));
+      box.appendChild(el('p', 't ashurit', stripPoints(text)));
+    } else if (S.tikkun === 'ashurit') {
+      box.appendChild(el('p', 't ashurit', stripPoints(text)));
+    } else {
+      box.appendChild(el('p', 't taamim', text));
+    }
+    wrap.appendChild(box);
   }
   return wrap;
 }
+
+/* Ashurit renders every point as an empty glyph, so they would take no space
+ * but still affect line breaking and copy/paste.  Strip them properly -- but a
+ * maqaf joins two words that a sefer Torah writes apart, so it becomes a space
+ * rather than nothing, and sof pasuq simply has no counterpart in the scroll. */
+const POINTS = /[\u0591-\u05BD\u05BF-\u05C7]/g;
+const MAQAF = /\u05BE/g;
+const stripPoints = (t) =>
+  t.replace(MAQAF, ' ').replace(POINTS, '').replace(/\s{2,}/g, ' ').trim();
 
 const ALIYOT = { 1: 'כֹּהֵן', 2: 'לֵוִי', 3: 'שְׁלִישִׁי', 4: 'רְבִיעִי',
                  5: 'חֲמִישִׁי', 6: 'שִׁשִּׁי', 7: 'שְׁבִיעִי', M: 'מַפְטִיר' };
@@ -198,6 +223,7 @@ function renderService(key) {
   }
   if (!shown) main.appendChild(el('p', 'empty', 'אין תוכן'));
   buildIndex();
+  buildRail();
   main.scrollTop = 0;
   window.scrollTo(0, 0);
 }
@@ -205,6 +231,108 @@ function renderService(key) {
 /* Shacharit is long enough that scrolling to the Amidah is a chore; the index
  * lists whatever actually rendered for today, so it doubles as a check on
  * what the siddur decided to include. */
+/* Hebrew names for the structural landmarks the rail aims at.  Sefaria's
+ * group titles are English; these are what a siddur calls them. */
+const LANDMARK_HE = {
+  'Preparatory Prayers': 'הַשְׁכָּמַת הַבֹּקֶר', 'Korbanot': 'קָרְבָּנוֹת',
+  'Pesukei Dezimra': 'פְּסוּקֵי דְזִמְרָא', 'Blessings of the Shema': 'קְרִיאַת שְׁמַע',
+  'Amidah': 'עֲמִידָה', 'Amida': 'עֲמִידָה', 'Kedushah': 'קְדֻשָּׁה',
+  'Post Amidah': 'אַחַר הָעֲמִידָה', 'Tachanun': 'תַּחֲנוּן',
+  'Removing the Torah from Ark': 'הוֹצָאַת סֵֽפֶר תּוֹרָה',
+  'Reading from Sefer': 'קְרִיאַת הַתּוֹרָה',
+  'Returning Sefer to Aron': 'הַכְנָסַת סֵֽפֶר תּוֹרָה',
+  'Concluding Prayers': 'סִיּוּם הַתְּפִלָּה', 'Post Service': 'נוֹסָפוֹת',
+  'Korbanot (Israel)': 'קָרְבָּנוֹת', 'Hallel': 'הַלֵּל',
+  'Musaf Amidah for Rosh Chodesh': 'מוּסָף', 'Maariv': 'עַרְבִית',
+  'Minchah': 'מִנְחָה', 'Kaddish': 'קַדִּישׁ',
+  "Additions for Motza'ei Shabbat": 'מוֹצָאֵי שַׁבָּת',
+};
+
+/* Landmarks for the rail.  Long services (Ashkenaz shacharit is ~115 sections)
+ * are grouped by their structural parent; short ones list their sections, since
+ * grouping them would collapse everything to a single entry. */
+function railTargets() {
+  const heads = [...document.querySelectorAll('#doc .sec, #doc .divider')];
+  const secs = heads.filter((n) => n.classList.contains('sec'));
+  const out = [];
+  const grouped = secs.length > 15;
+  let last = null;
+  for (const node of heads) {
+    if (node.classList.contains('divider')) {
+      out.push({ node, label: node.textContent.split('—')[0].trim(), major: true });
+      last = null;
+      continue;
+    }
+    const sec = DATA.sections[node.id.replace(/^sec-/, '')];
+    if (!sec) continue;
+    if (grouped) {
+      const p = sec.path;
+      const key = p.length > 1 ? p[p.length - 2] : p[0];
+      if (key === last) continue;
+      last = key;
+      out.push({ node, label: LANDMARK_HE[key] || sec.he, major: false });
+    } else {
+      out.push({ node, label: sec.he, major: false });
+    }
+  }
+  // Hallel and Musaf arrive both as a divider and as their own sections;
+  // collapse repeats so the rail reads as a list of places, not a list of DOM
+  // nodes that happen to share a name.
+  return out.filter((t, i) => i === 0 || t.label !== out[i - 1].label);
+}
+
+let RAIL = [];
+
+function buildRail() {
+  const rail = $('#rail');
+  rail.innerHTML = '';
+  RAIL = railTargets();
+  if (RAIL.length < 3) return;
+  for (const t of RAIL) {
+    const b = el('button');
+    b.appendChild(el('span', 'dot'));
+    b.appendChild(el('span', 'lab', t.label));
+    b.title = t.label;
+    b.setAttribute('aria-label', t.label);
+    b.onclick = () => scrollToNode(t.node);
+    const flash = () => { b.classList.add('press');
+      clearTimeout(b._t); b._t = setTimeout(() => b.classList.remove('press'), 1400); };
+    b.addEventListener('pointerdown', flash);
+    t.btn = b;
+    rail.appendChild(b);
+  }
+  syncRail();
+}
+
+function scrollToNode(node) {
+  const y = node.getBoundingClientRect().top + window.scrollY
+          - ($('header').offsetHeight + 8);
+  window.scrollTo({ top: y, behavior: 'smooth' });
+}
+
+let railTick = false;
+function syncRail() {
+  if (!RAIL.length) return;
+  const line = $('header').offsetHeight + 40;
+  let active = 0;
+  for (let i = 0; i < RAIL.length; i++) {
+    if (RAIL[i].node.getBoundingClientRect().top <= line) active = i;
+  }
+  RAIL.forEach((t, i) => t.btn && t.btn.classList.toggle('on', i === active));
+  const w = $('#where');
+  if (w) {
+    const label = RAIL[active] && RAIL[active].label;
+    w.textContent = label || '';
+    w.hidden = !label || window.scrollY < 60;
+  }
+}
+
+window.addEventListener('scroll', () => {
+  if (railTick) return;
+  railTick = true;
+  requestAnimationFrame(() => { railTick = false; syncRail(); });
+}, { passive: true });
+
 function buildIndex() {
   const list = $('#index');
   list.innerHTML = '';
@@ -406,12 +534,19 @@ function wireSettings() {
   $('#variants').checked = S.variants;
   $('#variants').onchange = (e) => { S.variants = e.target.checked;
     store.set('variants', S.variants); applyPrefs(); renderService(S.service); };
+  $('#tikkun').value = S.tikkun;
+  $('#tikkun').onchange = (e) => { S.tikkun = e.target.value;
+    store.set('tikkun', S.tikkun); renderService(S.service); };
   $('#font').value = S.font;
   $('#font').onchange = (e) => { S.font = e.target.value;
     store.set('font', S.font); applyPrefs(); };
   $('#size').value = S.size;
   $('#size').oninput = (e) => { S.size = +e.target.value;
     store.set('size', S.size); applyPrefs(); };
+  $('#wake').checked = S.wake;
+  $('#wake').onchange = (e) => { S.wake = e.target.checked;
+    store.set('wake', S.wake); applyWake(); };
+  applyWake();
   $('#locate').onclick = locate;
   $('#settings-toggle').onclick = () => {
     $('#index-wrap').classList.remove('open');
@@ -423,6 +558,29 @@ function wireSettings() {
   };
   if (S.loc) $('#locname').textContent = S.loc.name || 'מִקּוּם שָׁמוּר';
 }
+
+/* A screen that sleeps in the middle of the Amidah is its own small problem.
+ * The lock is dropped whenever the page is hidden and re-taken on return,
+ * which is what the API requires. */
+let wakeLock = null;
+async function applyWake() {
+  if (!('wakeLock' in navigator)) {
+    $('#wake').disabled = true;
+    return;
+  }
+  try {
+    if (S.wake && !wakeLock) {
+      wakeLock = await navigator.wakeLock.request('screen');
+      wakeLock.addEventListener('release', () => { wakeLock = null; });
+    } else if (!S.wake && wakeLock) {
+      await wakeLock.release();
+      wakeLock = null;
+    }
+  } catch (e) { wakeLock = null; }
+}
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible' && S.wake) applyWake();
+});
 
 function locate() {
   if (!navigator.geolocation) return;

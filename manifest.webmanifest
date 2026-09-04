@@ -1,22 +1,37 @@
 {
- "name": "סידור",
+ "id": "/siddur/",
+ "name": "סידור — תפילת חול",
  "short_name": "סידור",
- "start_url": ".",
+ "description": "סידור לימות החול שמתעדכן לפי היום, המקום והשעה",
+ "start_url": "./",
+ "scope": "./",
  "display": "standalone",
  "background_color": "#f7f3ea",
  "theme_color": "#f7f3ea",
  "lang": "he",
  "dir": "rtl",
+ "categories": [
+  "books",
+  "lifestyle"
+ ],
  "icons": [
   {
    "src": "icon-192.png",
    "sizes": "192x192",
-   "type": "image/png"
+   "type": "image/png",
+   "purpose": "any"
   },
   {
    "src": "icon-512.png",
    "sizes": "512x512",
-   "type": "image/png"
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icon-maskable.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
   }
  ]
 }

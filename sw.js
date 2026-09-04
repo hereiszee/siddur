@@ -5,9 +5,9 @@
  * to whatever version they first loaded.  The text, fonts and calendar data
  * are large and effectively immutable, so those are cache-first.
  */
-const V = 'siddur-v4';
+const V = 'siddur-v5';
 const SHELL = ['./', 'index.html', 'bundle.js', 'manifest.webmanifest'];
-const DURABLE = /\/(data|fonts)\/|icon-\d+\.png$/;
+const DURABLE = /\/(data|fonts)\/|icon-[\w-]+\.png$/;
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(V)
