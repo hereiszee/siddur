@@ -8,20 +8,20 @@
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="manifest" href="manifest.webmanifest">
 <style>
-@font-face{font-family:Keter;src:url(fonts/keter.woff2)format('woff2');font-weight:400;font-display:swap}
-@font-face{font-family:Keter;src:url(fonts/keter-bold.woff2)format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:Noto;src:url(fonts/notoserif.woff2)format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:Noto;src:url(fonts/notoserif-bold.woff2)format('woff2');font-weight:700;font-display:swap}
 @font-face{font-family:Shofar;src:url(fonts/shofar.woff2)format('woff2');font-weight:400;font-display:swap}
 @font-face{font-family:Shofar;src:url(fonts/shofar-bold.woff2)format('woff2');font-weight:700;font-display:swap}
 @font-face{font-family:Frank;src:url(fonts/frank.woff2)format('woff2');font-weight:400;font-display:swap}
 @font-face{font-family:Stam;src:url(fonts/stam.woff2)format('woff2');font-weight:400;font-display:swap}
 
 :root{
-  --size:20px;
+  --size:21px;
   --ink:#1b1714; --ink-soft:#6b6055; --ink-faint:#9b9186;
   --bg:#f7f3ea; --card:#fffdf7; --line:#e2d9c8;
   --gold:#8a6a1f; --gold-bg:#f5ecd4;
   --blue:#2a4d6e;
-  --body:Keter,'Frank Ruehl CLM','Times New Roman',serif;
+  --body:Noto,'Noto Serif Hebrew','Frank Ruehl CLM','Times New Roman',serif;
 }
 :root[data-font=shofar]{--body:Shofar,serif}
 :root[data-font=frank]{--body:Frank,serif}
@@ -193,7 +193,7 @@ footer a{color:inherit}
       </select></div>
     <div class="row"><label for="font">גּוֹפָן</label>
       <select id="font">
-        <option value="keter">כֶּתֶר</option>
+        <option value="notoserif">נוֹטוֹ סֶרִיף</option>
         <option value="shofar">שׁוֹפָר</option>
         <option value="frank">פְרַנְק־רִיהְל</option>
         <option value="stam">אַשּׁוּרִית (סְתָ״ם)</option>

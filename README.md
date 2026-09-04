@@ -83,15 +83,25 @@ The app names which one applies.
 
 ## Typography
 
-Body text is **Keter YG**, with **Shofar** and **Frank Ruehl CLM** as
-alternatives — all from the [Culmus project](https://culmus.sourceforge.io/),
-and all carrying the Hancock/Hudson Biblical Hebrew layout logic, which is what
-positions nikud and ta'amei hamikra correctly rather than letting them collide.
+Body text is **Noto Serif Hebrew** (SIL OFL) — chosen over the Culmus faces
+after setting them side by side at reading size, because its stems carry more
+weight and its nikud sits further off the letters, which is most of what makes
+pointed Hebrew legible on a phone. **Shofar** and **Frank Ruehl CLM** are
+offered as alternatives; Frank Ruehl is the classic Hebrew book face and the
+most traditional of the three, at the cost of being the lightest.
+
+All three carry full cantillation coverage, which matters more than it sounds:
+Frank Ruhl Libre and David Libre, the obvious Google Fonts choices, ship
+**zero** of the 31 ta'amei hamikra and would silently drop every mark in the
+Torah reading.
 
 **Stam Ashkenaz CLM** is offered as an Ashurit display option. It is a genuine
 STA"M face, and it is worth knowing that STA"M script was designed for a sofer's
 quill and without nikud — it is beautiful and it is not what you want to daven
 from at 6:40am. Hence the default.
+
+A specimen of the candidates is at
+[`/specimen/`](https://hereiszee.github.io/siddur/specimen/).
 
 ## Layout
 
@@ -110,7 +120,8 @@ data/
   edot.json         }
   outline.json      service order and section-level conditions
   leyning.json      Torah readings with ta'amim
-fonts/              Culmus, subset to Hebrew and converted to woff2
+fonts/              subset to Hebrew and converted to woff2
+specimen/           the font comparison the default was chosen from
 raw/                what was pulled from Sefaria, before parsing
 tools/              the build
 ```

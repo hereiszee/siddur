@@ -14,14 +14,28 @@ const store = {
     catch (e) {} },
 };
 
+/* Keter YG was the original default; it reads thin on a phone and its nikud
+ * crowds the letters, so anyone still carrying that preference is moved over --
+ * and the move is written back, so this runs once rather than every load. */
+const DROPPED_FONTS = ['keter', 'hadasim'];
+
+function migrateFont(store) {
+  let f = store.get('font', 'notoserif');
+  if (DROPPED_FONTS.includes(f)) {
+    f = 'notoserif';
+    store.set('font', f);
+  }
+  return f;
+}
+
 const S = {
   nusach:   store.get('nusach', 'ashkenaz'),
   israel:   store.get('israel', false),
   minyan:   store.get('minyan', true),
   notes:    store.get('notes', true),
   variants: store.get('variants', false),
-  font:     store.get('font', 'keter'),
-  size:     store.get('size', 20),
+  font:     'notoserif',   // replaced below, once the store is readable
+  size:     store.get('size', 21),
   loc:      store.get('loc', null),
   service:  null,
   auto:     true,
@@ -356,6 +370,7 @@ function renderTabs() {
 }
 
 export async function boot() {
+  S.font = migrateFont(store);
   [OUTLINE, LEYNING] = await Promise.all([
     fetch('data/outline.json').then((r) => r.json()),
     fetch('data/leyning.json').then((r) => r.json()),
