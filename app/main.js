@@ -197,7 +197,15 @@ const ALIYOT = { 1: 'כֹּהֵן', 2: 'לֵוִי', 3: 'שְׁלִישִׁי', 
                  5: 'חֲמִישִׁי', 6: 'שִׁשִּׁי', 7: 'שְׁבִיעִי', M: 'מַפְטִיר' };
 const aliyahName = (n) => ALIYOT[n] || n;
 
-function renderService(key) {
+/* Re-draw the current service in place, keeping the reader where they are. */
+function reRender() {
+  lastSig = serviceSignature();
+  renderService(S.service, { keepScroll: true });
+}
+
+function renderService(key, opts = {}) {
+  const keepScroll = !!opts.keepScroll;
+  const prevY = window.scrollY;
   const main = $('#doc');
   main.innerHTML = '';
   const svc = OUTLINE[S.nusach].find((s) => s.key === key);
@@ -224,8 +232,9 @@ function renderService(key) {
   if (!shown) main.appendChild(el('p', 'empty', 'אין תוכן'));
   buildIndex();
   buildRail();
-  main.scrollTop = 0;
-  window.scrollTo(0, 0);
+  if (keepScroll) window.scrollTo(0, prevY);
+  else window.scrollTo(0, 0);
+  syncRail();
 }
 
 /* Shacharit is long enough that scrolling to the Amidah is a chore; the index
@@ -299,10 +308,42 @@ function buildRail() {
   syncRail();
 }
 
+/* Jumping inside a service this long has two traps.
+ *
+ * Smooth scrolling animates across every landmark in between, so the rail
+ * lights each one up on the way past and the jump reads as a slow cycle
+ * through the service rather than a jump.  A siddur jump should be instant.
+ *
+ * And `content-visibility: auto` means every off-screen section reports an
+ * estimated height rather than its real one, so the target's measured position
+ * moves as the jump renders the sections it lands among -- one scrollTo puts
+ * you near the target, not on it.  So: jump, re-measure, correct, until the
+ * position stops moving.
+ *
+ * The correction must not run on rAF: rAF is suspended while the page is
+ * hidden, so a jump started just before the phone locks would never finish
+ * correcting.  A timer still fires.  A second click can also arrive
+ * mid-correction, so each jump carries a token and a superseded loop stops. */
+let jumpToken = 0;
+
 function scrollToNode(node) {
-  const y = node.getBoundingClientRect().top + window.scrollY
-          - ($('header').offsetHeight + 8);
-  window.scrollTo({ top: y, behavior: 'smooth' });
+  const token = ++jumpToken;
+  const targetY = () =>
+    Math.max(0, node.getBoundingClientRect().top + window.scrollY
+                - ($('header').offsetHeight + 8));
+  let tries = 0;
+  const settle = () => {
+    if (token !== jumpToken) return;       // a newer jump took over
+    const y = targetY();
+    // Converged, or the document cannot scroll any further.
+    if (Math.abs(y - window.scrollY) < 2 || ++tries > 20) {
+      syncRail();
+      return;
+    }
+    window.scrollTo(0, y);
+    setTimeout(settle, 16);
+  };
+  settle();
 }
 
 let railTick = false;
@@ -392,9 +433,7 @@ function buildIndex() {
                  h.textContent);
     b.onclick = () => {
       $('#index-wrap').classList.remove('open');
-      const y = h.getBoundingClientRect().top + window.scrollY
-              - ($('header').offsetHeight + 8);
-      window.scrollTo({ top: y, behavior: 'smooth' });
+      scrollToNode(h);
     };
     list.appendChild(b);
   }
@@ -494,7 +533,19 @@ function baseNow() {
   return new Date(+m[1], +m[2] - 1, +m[3], m[4] ? +m[4] : 9, m[5] ? +m[5] : 0);
 }
 
-async function recompute() {
+/* What the rendered service depends on.  The header and zmanim are refreshed
+ * every minute, but re-rendering the text on that tick would throw away the
+ * reader's place -- so the text is only rebuilt when one of these changes. */
+function serviceSignature() {
+  return [S.nusach, S.service, S.israel, S.minyan, S.notes, S.variants, S.tikkun,
+          DAY.hd.abs(), [...DAY.conds.keys()].sort().join(','),
+          DAY.tachanun.shacharit, DAY.tachanun.mincha,
+          DAY.hallel.kind, DAY.musaf, DAY.torahReading].join('|');
+}
+
+let lastSig = null;
+
+async function recompute(opts = {}) {
   const now = baseNow();
   const loc = S.loc || { lat: 31.7683, lon: 35.2137, tz: 'Asia/Jerusalem',
                          name: 'יְרוּשָׁלַיִם', israel: true };
@@ -512,7 +563,12 @@ async function recompute() {
   renderNow(cur, now);
   renderHeader();
   renderTabs();
-  renderService(S.service);
+  const sig = serviceSignature();
+  if (opts.force || sig !== lastSig) {
+    const first = lastSig === null;
+    lastSig = sig;
+    renderService(S.service, { keepScroll: !first && !opts.force });
+  }
 }
 
 const SVC_HE = { shacharit: 'שַׁחֲרִית', mincha: 'מִנְחָה', maariv: 'עַרְבִית',
@@ -542,7 +598,8 @@ function renderTabs() {
   for (const s of svcs) {
     const b = el('button', 'tab' + (s.key === S.service ? ' on' : ''), s.he);
     b.onclick = () => { S.service = s.key; S.auto = false;
-                        renderTabs(); renderService(s.key); };
+                        renderTabs(); renderService(s.key);
+                        lastSig = serviceSignature(); };
     bar.appendChild(b);
   }
 }
@@ -578,16 +635,16 @@ function wireSettings() {
     store.set('israel', S.israel); recompute(); };
   $('#minyan').checked = S.minyan;
   $('#minyan').onchange = (e) => { S.minyan = e.target.checked;
-    store.set('minyan', S.minyan); renderService(S.service); };
+    store.set('minyan', S.minyan); reRender(); };
   $('#notes').checked = S.notes;
   $('#notes').onchange = (e) => { S.notes = e.target.checked;
-    store.set('notes', S.notes); renderService(S.service); };
+    store.set('notes', S.notes); reRender(); };
   $('#variants').checked = S.variants;
   $('#variants').onchange = (e) => { S.variants = e.target.checked;
-    store.set('variants', S.variants); applyPrefs(); renderService(S.service); };
+    store.set('variants', S.variants); applyPrefs(); reRender(); };
   $('#tikkun').value = S.tikkun;
   $('#tikkun').onchange = (e) => { S.tikkun = e.target.value;
-    store.set('tikkun', S.tikkun); renderService(S.service); };
+    store.set('tikkun', S.tikkun); reRender(); };
   $('#font').value = S.font;
   $('#font').onchange = (e) => { S.font = e.target.value;
     store.set('font', S.font); applyPrefs(); };
