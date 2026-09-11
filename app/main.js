@@ -85,7 +85,8 @@ function sectionVisible(cond, serviceKey) {
     case 'rosh_chodesh': return DAY.conds.has('rosh_chodesh');
     case 'omer': return !!DAY.omer;
     case 'kiddush_levana': return kiddushLevanaWindow();
-    case 'bedtime': return false;              // its own view
+    // Kept out of Maariv, but it is the whole of its own tab.
+    case 'bedtime': return serviceKey === 'bedtime';
     case 'motzaei_shabbat': return DAY.conds.has('motzaei_shabbat');
     default: return true;
   }
@@ -217,7 +218,11 @@ function renderService(key, opts = {}) {
     const sec = DATA.sections[ref.id];
     if (!sec) continue;
     // The Torah reading itself goes where the siddur puts the sefer.
-    main.appendChild(renderSection(sec));
+    const node = renderSection(sec);
+    // A section whose every line is conditional and off today (Psalm 130
+    // outside the Ten Days) would otherwise leave a bare heading behind.
+    if (!node.querySelector('p.t, p.flow')) continue;
+    main.appendChild(node);
     shown++;
     if (/reading-from-sefer-birkat-hatorah|torah-reading$/.test(ref.id)) {
       const ley = renderLeyning();

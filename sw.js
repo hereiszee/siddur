@@ -5,7 +5,7 @@
  * to whatever version they first loaded.  The text, fonts and calendar data
  * are large and effectively immutable, so those are cache-first.
  */
-const V = 'siddur-v8';
+const V = 'siddur-v9';
 const SHELL = ['./', 'index.html', 'bundle.js', 'manifest.webmanifest'];
 const DURABLE = /\/(data|fonts)\/|icon-[\w-]+\.png$/;
 
